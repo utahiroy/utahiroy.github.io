@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
 import NavCard from "../components/NavCard.astro";
+import { primaryLinks } from "../data/links";
 ---
 
 <BaseLayout title="utahiroy">
@@ -138,22 +139,21 @@ import NavCard from "../components/NavCard.astro";
       <p class="text-base text-neutral-500">
         Interested in connecting? Find me on these platforms.
       </p>
-      <div class="mt-8 flex items-center justify-center gap-6">
-        <a
-          href="https://github.com/utahiroy"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-sm font-medium text-neutral-400 transition-colors hover:text-sage-600"
-        >
-          GitHub
-        </a>
-        <span class="text-neutral-200">|</span>
-        <a
-          href="mailto:hello@example.com"
-          class="text-sm font-medium text-neutral-400 transition-colors hover:text-sage-600"
-        >
-          Email
-        </a>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+        {
+          primaryLinks.map((link, i) => (
+            <>
+              {i > 0 && <span class="text-neutral-200">·</span>}
+              <a
+                href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                class="text-sm font-medium text-neutral-400 transition-colors hover:text-sage-600"
+              >
+                {link.label}
+              </a>
+            </>
+          ))
+        }
       </div>
     </div>
   </Section>

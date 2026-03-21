@@ -1,10 +1,26 @@
 ---
+import { secondaryLinks } from "../data/links";
+
 const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-neutral-200/60 bg-neutral-50">
   <div class="mx-auto max-w-5xl px-6 py-12">
-    <div class="flex flex-col items-center gap-4 text-center">
+    <div class="flex flex-col items-center gap-6 text-center">
+      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+        {
+          secondaryLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs font-medium text-neutral-400 transition-colors hover:text-sage-600"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
       <p class="text-sm text-neutral-400">
         &copy; {year} utahiroy
       </p>
