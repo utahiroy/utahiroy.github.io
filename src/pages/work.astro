@@ -2,81 +2,78 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
+import { work, projects, skills, direction } from "../data/work";
 ---
 
 <BaseLayout title="Work — utahiroy" description="Selected projects, skills, and professional direction.">
+  <!-- Header -->
   <Section>
     <div class="reveal max-w-2xl">
       <SectionLabel label="Work" />
       <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
-        What I Build
+        {work.headline}
       </h1>
       <p class="mt-6 text-lg leading-relaxed text-neutral-500">
-        A curated look at the projects, skills, and professional direction
-        that define my work.
+        {work.summary}
       </p>
     </div>
   </Section>
 
+  <!-- Selected Work -->
   <Section>
     <div class="reveal">
-      <SectionLabel label="Selected Projects" />
-      <div class="grid gap-6 sm:grid-cols-2">
-        {
-          [
-            {
-              title: "Project One",
-              description:
-                "A brief description of what this project is, what problem it solves, and what you learned.",
-              tags: ["Design", "Development"],
-            },
-            {
-              title: "Project Two",
-              description:
-                "Another project that showcases a different skill or interest area.",
-              tags: ["Strategy", "Technology"],
-            },
-          ].map((project) => (
-            <div class="rounded-2xl border border-neutral-200/80 bg-white p-6">
-              <h3 class="text-base font-semibold text-neutral-900">
-                {project.title}
-              </h3>
-              <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-                {project.description}
-              </p>
-              <div class="mt-4 flex gap-2">
-                {project.tags.map((tag) => (
-                  <span class="rounded-full bg-sage-50 px-3 py-1 text-xs font-medium text-sage-700">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+      <SectionLabel label="Selected Work" />
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <a
+            href={project.href ?? "#"}
+            class:list={[
+              "group block rounded-2xl border border-neutral-200/80 bg-white p-6 transition-all duration-300",
+              project.href
+                ? "hover:border-sage-300 hover:shadow-lg hover:shadow-sage-100/50 hover:-translate-y-0.5"
+                : "cursor-default",
+            ]}
+          >
+            <h3 class="text-base font-semibold text-neutral-900 transition-colors group-hover:text-sage-700">
+              {project.title}
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+              {project.description}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="rounded-full bg-sage-50 px-3 py-1 text-xs font-medium text-sage-700">
+                  {tag}
+                </span>
+              ))}
             </div>
-          ))
-        }
+          </a>
+        ))}
       </div>
     </div>
   </Section>
 
-  <Section narrow>
+  <!-- Skills & Tools -->
+  <Section>
     <div class="reveal">
       <SectionLabel label="Skills & Tools" />
       <div class="flex flex-wrap gap-3">
-        {
-          [
-            "TypeScript",
-            "React",
-            "Astro",
-            "Tailwind CSS",
-            "Design Thinking",
-            "Problem Solving",
-          ].map((skill) => (
-            <span class="rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-600">
-              {skill}
-            </span>
-          ))
-        }
+        {skills.map((skill) => (
+          <span class="rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-600">
+            {skill}
+          </span>
+        ))}
       </div>
+    </div>
+  </Section>
+
+  <!-- Current Direction -->
+  <Section narrow>
+    <div class="reveal rounded-2xl border border-neutral-200/80 bg-white p-8">
+      <h2 class="text-lg font-semibold text-neutral-900">{direction.title}</h2>
+      <p class="mt-4 text-base leading-relaxed text-neutral-600">
+        {direction.description}
+      </p>
     </div>
   </Section>
 </BaseLayout>
