@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+---
+
+<BaseLayout title="Thought — utahiroy" description="Ideas, reflections, and things worth sharing.">
+  <Section>
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="Thought" />
+      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+        How I Think
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+        Ideas, reflections, and references that shape my perspective.
+        A space for writing and thinking in public.
+      </p>
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal space-y-6">
+      {
+        [
+          {
+            title: "On Building Things That Matter",
+            date: "2026",
+            excerpt:
+              "Thoughts on why the best work often comes from constraints, curiosity, and a willingness to start before you feel ready.",
+          },
+          {
+            title: "Simplicity as a Feature",
+            date: "2026",
+            excerpt:
+              "Why removing things is often harder — and more valuable — than adding them. A reflection on design and decision-making.",
+          },
+          {
+            title: "Learning in Public",
+            date: "2026",
+            excerpt:
+              "The case for sharing what you learn, even when you're not an expert. How openness accelerates growth.",
+          },
+        ].map((thought) => (
+          <article class="group rounded-2xl border border-neutral-200/80 bg-white p-6 transition-all duration-300 hover:border-sage-300 hover:shadow-md hover:shadow-sage-100/30">
+            <p class="text-xs font-medium text-neutral-400">{thought.date}</p>
+            <h3 class="mt-2 text-base font-semibold text-neutral-900 transition-colors group-hover:text-sage-700">
+              {thought.title}
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+              {thought.excerpt}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal text-center">
+      <p class="text-sm text-neutral-400">
+        More thoughts coming soon. This space will grow over time.
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

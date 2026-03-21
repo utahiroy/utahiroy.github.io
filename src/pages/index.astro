@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import NavCard from "../components/NavCard.astro";
+---
+
+<BaseLayout title="utahiroy">
+  <!-- Hero -->
+  <section class="relative flex min-h-[85vh] items-center justify-center px-6">
+    <div class="text-center">
+      <h1
+        class="reveal text-6xl font-bold tracking-tight text-neutral-900 sm:text-7xl md:text-8xl"
+      >
+        utahiroy
+      </h1>
+      <p
+        class="reveal reveal-delay-2 mt-6 text-lg text-neutral-500 sm:text-xl"
+      >
+        Building things at the intersection of technology and craft.
+      </p>
+      <div class="reveal reveal-delay-4 mt-10">
+        <a
+          href="#explore"
+          class="inline-flex items-center gap-2 text-sm font-medium text-sage-600 transition-colors hover:text-sage-700"
+        >
+          <span>Scroll to explore</span>
+          <svg
+            class="h-4 w-4 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Subtle decorative element -->
+    <div
+      class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.03]"
+    >
+      <div
+        class="h-[600px] w-[600px] rounded-full bg-sage-400 blur-[128px]"
+      >
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <Section id="explore">
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="About" />
+      <p class="text-2xl font-light leading-relaxed text-neutral-700 sm:text-3xl">
+        I'm interested in the space where
+        <span class="font-normal text-neutral-900">technology</span>,
+        <span class="font-normal text-neutral-900">design</span>, and
+        <span class="font-normal text-neutral-900">human experience</span>
+        meet.
+      </p>
+      <p class="mt-6 text-base leading-relaxed text-neutral-500">
+        This site is a window into who I am — what I work on, what I think
+        about, and what I enjoy outside of work.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Navigation Cards -->
+  <Section>
+    <div class="reveal">
+      <SectionLabel label="Explore" />
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="reveal reveal-delay-1">
+        <NavCard
+          title="Profile"
+          description="Background, values, and the path that brought me here."
+          href="/profile"
+        />
+      </div>
+      <div class="reveal reveal-delay-2">
+        <NavCard
+          title="Work"
+          description="Selected projects, skills, and professional direction."
+          href="/work"
+        />
+      </div>
+      <div class="reveal reveal-delay-3">
+        <NavCard
+          title="Hobby"
+          description="Photography, sports, travel, and personal interests."
+          href="/hobby"
+        />
+      </div>
+      <div class="reveal reveal-delay-4">
+        <NavCard
+          title="Thought"
+          description="Ideas, reflections, and things I find worth sharing."
+          href="/thought"
+        />
+      </div>
+    </div>
+  </Section>
+
+  <!-- Now -->
+  <Section narrow>
+    <div class="reveal">
+      <SectionLabel label="Now" />
+      <div class="rounded-2xl border border-neutral-200/80 bg-white p-8">
+        <h2 class="text-lg font-semibold text-neutral-900">Current Focus</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3 text-sm text-neutral-600">
+            <span class="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sage-400"></span>
+            <span>Building this portfolio — designing how I present myself to the world.</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm text-neutral-600">
+            <span class="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sage-400"></span>
+            <span>Exploring new ideas at the intersection of technology and craft.</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm text-neutral-600">
+            <span class="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sage-400"></span>
+            <span>Learning, building, and sharing along the way.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Contact -->
+  <Section>
+    <div class="reveal text-center">
+      <SectionLabel label="Connect" />
+      <p class="text-base text-neutral-500">
+        Interested in connecting? Find me on these platforms.
+      </p>
+      <div class="mt-8 flex items-center justify-center gap-6">
+        <a
+          href="https://github.com/utahiroy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-neutral-400 transition-colors hover:text-sage-600"
+        >
+          GitHub
+        </a>
+        <span class="text-neutral-200">|</span>
+        <a
+          href="mailto:hello@example.com"
+          class="text-sm font-medium text-neutral-400 transition-colors hover:text-sage-600"
+        >
+          Email
+        </a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
