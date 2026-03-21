@@ -2,15 +2,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
-import { work, projects, skills, direction } from "../data/work";
+import { work, projects, areas, skills, direction } from "../data/work";
 ---
 
-<BaseLayout title="Work — utahiroy" description="Selected projects, skills, and professional direction.">
+<BaseLayout
+  title="Work — Utahiro Yoshimoto"
+  description="ESG analysis, GX research, sustainability data — selected projects and professional direction."
+>
   <!-- Header -->
   <Section>
     <div class="reveal max-w-2xl">
       <SectionLabel label="Work" />
-      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+      <h1
+        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+      >
         {work.headline}
       </h1>
       <p class="mt-6 text-lg leading-relaxed text-neutral-500">
@@ -23,32 +28,62 @@ import { work, projects, skills, direction } from "../data/work";
   <Section>
     <div class="reveal">
       <SectionLabel label="Selected Work" />
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <a
-            href={project.href ?? "#"}
-            class:list={[
-              "group block rounded-2xl border border-neutral-200/80 bg-white p-6 transition-all duration-300",
-              project.href
-                ? "hover:border-sage-300 hover:shadow-lg hover:shadow-sage-100/50 hover:-translate-y-0.5"
-                : "cursor-default",
-            ]}
-          >
-            <h3 class="text-base font-semibold text-neutral-900 transition-colors group-hover:text-sage-700">
-              {project.title}
-            </h3>
-            <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-              {project.description}
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span class="rounded-full bg-sage-50 px-3 py-1 text-xs font-medium text-sage-700">
-                  {tag}
-                </span>
-              ))}
+      <div class="space-y-6">
+        {
+          projects.map((project) => (
+            <div class="rounded-2xl border border-neutral-200/80 bg-white p-6 md:p-8">
+              <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                <h3 class="text-base font-semibold text-neutral-900">
+                  {project.title}
+                </h3>
+                {project.organization && (
+                  <span class="text-xs font-medium text-neutral-400">
+                    {project.organization}
+                  </span>
+                )}
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-neutral-600">
+                {project.description}
+              </p>
+              <ul class="mt-4 space-y-2">
+                {project.contributions.map((c) => (
+                  <li class="flex items-start gap-3 text-sm text-neutral-500">
+                    <span class="mt-1.5 block h-1 w-1 flex-shrink-0 rounded-full bg-sage-400" />
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span class="rounded-full bg-sage-50 px-3 py-1 text-xs font-medium text-sage-700">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </a>
-        ))}
+          ))
+        }
+      </div>
+    </div>
+  </Section>
+
+  <!-- Areas of Work -->
+  <Section>
+    <div class="reveal">
+      <SectionLabel label="Areas of Work" />
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          areas.map((area) => (
+            <div class="rounded-2xl border border-neutral-200/80 bg-white p-6">
+              <h3 class="text-sm font-semibold text-neutral-900">
+                {area.name}
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+                {area.description}
+              </p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </Section>
@@ -58,18 +93,22 @@ import { work, projects, skills, direction } from "../data/work";
     <div class="reveal">
       <SectionLabel label="Skills & Tools" />
       <div class="flex flex-wrap gap-3">
-        {skills.map((skill) => (
-          <span class="rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-600">
-            {skill}
-          </span>
-        ))}
+        {
+          skills.map((skill) => (
+            <span class="rounded-full border border-neutral-200 px-4 py-2 text-sm text-neutral-600">
+              {skill}
+            </span>
+          ))
+        }
       </div>
     </div>
   </Section>
 
   <!-- Current Direction -->
   <Section narrow>
-    <div class="reveal rounded-2xl border border-neutral-200/80 bg-white p-8">
+    <div
+      class="reveal rounded-2xl border border-sage-200/60 bg-sage-50/40 p-8"
+    >
       <h2 class="text-lg font-semibold text-neutral-900">{direction.title}</h2>
       <p class="mt-4 text-base leading-relaxed text-neutral-600">
         {direction.description}

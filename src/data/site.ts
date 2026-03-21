@@ -4,16 +4,16 @@
  */
 
 export const site = {
-  name: "utahiroy",
+  name: "Utahiro Yoshimoto",
 
   /** The one-line positioning statement shown in the hero. */
-  tagline: "Connecting technology, business, and human experience.",
+  tagline: "Sustainability × Data × Implementation.",
 
   /** Supporting sentence beneath the tagline. */
   intro:
-    "I'm drawn to the work that sits between disciplines — where strategic thinking meets hands-on craft, and ideas become something people can feel.",
+    "I work at the intersection of environmental science, policy, and data — turning sustainability frameworks into structured, evidence-based systems that organizations can actually use.",
 
   /** Short site-wide description used in meta tags. */
   description:
-    "Personal portfolio of utahiroy — profile, work, hobbies, and thoughts.",
+    "Utahiro Yoshimoto — sustainability, data, and implementation. ESG analysis, GX research, and building toward Sustainability AI Auditing.",
 };

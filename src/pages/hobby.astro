@@ -2,18 +2,23 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
+import { hobby, hobbies } from "../data/hobby";
 ---
 
-<BaseLayout title="Hobby — utahiroy" description="Photography, sports, travel, and personal interests.">
+<BaseLayout
+  title="Hobby — Utahiro Yoshimoto"
+  description="Photography, sports, travel, music, and curiosity — the personal side."
+>
   <Section>
     <div class="reveal max-w-2xl">
       <SectionLabel label="Hobby" />
-      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
-        What I Enjoy
+      <h1
+        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+      >
+        {hobby.headline}
       </h1>
       <p class="mt-6 text-lg leading-relaxed text-neutral-500">
-        Life outside of work — the interests, activities, and experiences that
-        keep things balanced.
+        {hobby.summary}
       </p>
     </div>
   </Section>
@@ -21,28 +26,7 @@ import SectionLabel from "../components/SectionLabel.astro";
   <Section>
     <div class="reveal grid gap-8 sm:grid-cols-2">
       {
-        [
-          {
-            title: "Photography",
-            description:
-              "Capturing moments, places, and perspectives through a lens. A way to slow down and notice details.",
-          },
-          {
-            title: "Sports",
-            description:
-              "Staying active and embracing the discipline, teamwork, and energy that sports bring to everyday life.",
-          },
-          {
-            title: "Travel",
-            description:
-              "Exploring new places and cultures. Each trip brings a shift in perspective and fresh inspiration.",
-          },
-          {
-            title: "Personal Interests",
-            description:
-              "Reading, learning new skills, and staying curious about the world beyond my usual domain.",
-          },
-        ].map((hobby) => (
+        hobbies.map((item) => (
           <div class="group">
             <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100 transition-transform duration-300 group-hover:scale-[1.02]">
               <div class="flex h-full items-center justify-center text-sm text-neutral-300">
@@ -50,14 +34,28 @@ import SectionLabel from "../components/SectionLabel.astro";
               </div>
             </div>
             <h3 class="mt-4 text-base font-semibold text-neutral-900">
-              {hobby.title}
+              {item.title}
             </h3>
             <p class="mt-1 text-sm leading-relaxed text-neutral-500">
-              {hobby.description}
+              {item.description}
             </p>
+            {item.details && (
+              <p class="mt-2 text-xs leading-relaxed text-neutral-400">
+                {item.details}
+              </p>
+            )}
           </div>
         ))
       }
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal text-center">
+      <p class="text-sm text-neutral-400">
+        This page will grow with photos and stories over time. For now, it's a
+        map of what I pay attention to outside of work.
+      </p>
     </div>
   </Section>
 </BaseLayout>
