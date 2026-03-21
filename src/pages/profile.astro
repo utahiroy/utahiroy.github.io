@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+---
+
+<BaseLayout title="Profile — utahiroy" description="Who I am, where I come from, and what I value.">
+  <Section>
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="Profile" />
+      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+        Who I Am
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+        A brief introduction to my background, values, and the journey that
+        shaped who I am today.
+      </p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="reveal grid gap-12 md:grid-cols-2">
+      <div>
+        <h2 class="text-xl font-semibold text-neutral-900">Background</h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-600">
+          This is where your personal story goes — where you grew up, what
+          shaped your thinking, and the experiences that made you who you are.
+          Keep it authentic and concise.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold text-neutral-900">Values</h2>
+        <p class="mt-4 text-base leading-relaxed text-neutral-600">
+          What matters to you. What principles guide your decisions. What you
+          believe in and why. This section helps visitors understand your
+          character beyond a resume.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal rounded-2xl border border-neutral-200/80 bg-white p-8">
+      <h2 class="text-lg font-semibold text-neutral-900">At a Glance</h2>
+      <dl class="mt-6 space-y-4">
+        <div class="flex items-start justify-between border-b border-neutral-100 pb-4">
+          <dt class="text-sm font-medium text-neutral-400">Location</dt>
+          <dd class="text-sm text-neutral-700">Your City, Country</dd>
+        </div>
+        <div class="flex items-start justify-between border-b border-neutral-100 pb-4">
+          <dt class="text-sm font-medium text-neutral-400">Focus</dt>
+          <dd class="text-sm text-neutral-700">Technology &amp; Design</dd>
+        </div>
+        <div class="flex items-start justify-between">
+          <dt class="text-sm font-medium text-neutral-400">Interests</dt>
+          <dd class="text-sm text-neutral-700">Building, Learning, Creating</dd>
+        </div>
+      </dl>
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+---
+
+<BaseLayout title="Hobby — utahiroy" description="Photography, sports, travel, and personal interests.">
+  <Section>
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="Hobby" />
+      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+        What I Enjoy
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+        Life outside of work — the interests, activities, and experiences that
+        keep things balanced.
+      </p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="reveal grid gap-8 sm:grid-cols-2">
+      {
+        [
+          {
+            title: "Photography",
+            description:
+              "Capturing moments, places, and perspectives through a lens. A way to slow down and notice details.",
+          },
+          {
+            title: "Sports",
+            description:
+              "Staying active and embracing the discipline, teamwork, and energy that sports bring to everyday life.",
+          },
+          {
+            title: "Travel",
+            description:
+              "Exploring new places and cultures. Each trip brings a shift in perspective and fresh inspiration.",
+          },
+          {
+            title: "Personal Interests",
+            description:
+              "Reading, learning new skills, and staying curious about the world beyond my usual domain.",
+          },
+        ].map((hobby) => (
+          <div class="group">
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100 transition-transform duration-300 group-hover:scale-[1.02]">
+              <div class="flex h-full items-center justify-center text-sm text-neutral-300">
+                Photo placeholder
+              </div>
+            </div>
+            <h3 class="mt-4 text-base font-semibold text-neutral-900">
+              {hobby.title}
+            </h3>
+            <p class="mt-1 text-sm leading-relaxed text-neutral-500">
+              {hobby.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+</BaseLayout>
