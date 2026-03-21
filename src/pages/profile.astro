@@ -2,15 +2,27 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
-import { profile, background, values, approach, glance } from "../data/profile";
+import {
+  profile,
+  background,
+  values,
+  approach,
+  outlook,
+  glance,
+} from "../data/profile";
 ---
 
-<BaseLayout title="Profile — utahiroy" description="Who I am, where I come from, and what I value.">
+<BaseLayout
+  title="Profile — Utahiro Yoshimoto"
+  description="Background, values, and direction — from Japan to the U.S., across environmental science, policy, and data."
+>
   <!-- Header -->
   <Section>
     <div class="reveal max-w-2xl">
       <SectionLabel label="Profile" />
-      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+      <h1
+        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+      >
         {profile.headline}
       </h1>
       <p class="mt-6 text-lg leading-relaxed text-neutral-500">
@@ -22,10 +34,14 @@ import { profile, background, values, approach, glance } from "../data/profile";
   <!-- Background -->
   <Section>
     <div class="reveal max-w-2xl">
-      <h2 class="text-xl font-semibold text-neutral-900">{background.title}</h2>
-      {background.paragraphs.map((p) => (
-        <p class="mt-4 text-base leading-relaxed text-neutral-600">{p}</p>
-      ))}
+      <h2 class="text-xl font-semibold text-neutral-900">
+        {background.title}
+      </h2>
+      {
+        background.paragraphs.map((p) => (
+          <p class="mt-4 text-base leading-relaxed text-neutral-600">{p}</p>
+        ))
+      }
     </div>
   </Section>
 
@@ -34,14 +50,18 @@ import { profile, background, values, approach, glance } from "../data/profile";
     <div class="reveal">
       <h2 class="text-xl font-semibold text-neutral-900">{values.title}</h2>
       <div class="mt-8 grid gap-6 sm:grid-cols-3">
-        {values.items.map((item) => (
-          <div class="rounded-2xl border border-neutral-200/80 bg-white p-6">
-            <h3 class="text-sm font-semibold text-neutral-900">{item.name}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-              {item.description}
-            </p>
-          </div>
-        ))}
+        {
+          values.items.map((item) => (
+            <div class="rounded-2xl border border-neutral-200/80 bg-white p-6">
+              <h3 class="text-sm font-semibold text-neutral-900">
+                {item.name}
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+                {item.description}
+              </p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </Section>
@@ -51,18 +71,34 @@ import { profile, background, values, approach, glance } from "../data/profile";
     <div class="reveal">
       <h2 class="text-xl font-semibold text-neutral-900">{approach.title}</h2>
       <div class="mt-8 space-y-6">
-        {approach.items.map((item) => (
-          <div class="flex gap-4">
-            <span class="mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sage-400"></span>
-            <div>
-              <h3 class="text-sm font-semibold text-neutral-900">{item.name}</h3>
-              <p class="mt-1 text-sm leading-relaxed text-neutral-500">
-                {item.description}
-              </p>
+        {
+          approach.items.map((item) => (
+            <div class="flex gap-4">
+              <span class="mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sage-400" />
+              <div>
+                <h3 class="text-sm font-semibold text-neutral-900">
+                  {item.name}
+                </h3>
+                <p class="mt-1 text-sm leading-relaxed text-neutral-500">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
+    </div>
+  </Section>
+
+  <!-- Where I'm Headed -->
+  <Section narrow>
+    <div
+      class="reveal rounded-2xl border border-sage-200/60 bg-sage-50/40 p-8"
+    >
+      <h2 class="text-lg font-semibold text-neutral-900">{outlook.title}</h2>
+      <p class="mt-4 text-base leading-relaxed text-neutral-600">
+        {outlook.description}
+      </p>
     </div>
   </Section>
 
@@ -71,17 +107,21 @@ import { profile, background, values, approach, glance } from "../data/profile";
     <div class="reveal rounded-2xl border border-neutral-200/80 bg-white p-8">
       <h2 class="text-lg font-semibold text-neutral-900">At a Glance</h2>
       <dl class="mt-6 space-y-4">
-        {glance.map((item, i) => (
-          <div
-            class:list={[
-              "flex items-start justify-between",
-              i < glance.length - 1 && "border-b border-neutral-100 pb-4",
-            ]}
-          >
-            <dt class="text-sm font-medium text-neutral-400">{item.label}</dt>
-            <dd class="text-sm text-neutral-700">{item.value}</dd>
-          </div>
-        ))}
+        {
+          glance.map((item, i) => (
+            <div
+              class:list={[
+                "flex items-start justify-between",
+                i < glance.length - 1 && "border-b border-neutral-100 pb-4",
+              ]}
+            >
+              <dt class="text-sm font-medium text-neutral-400">
+                {item.label}
+              </dt>
+              <dd class="text-sm text-neutral-700">{item.value}</dd>
+            </div>
+          ))
+        }
       </dl>
     </div>
   </Section>

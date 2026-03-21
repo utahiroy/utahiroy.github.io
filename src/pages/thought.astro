@@ -2,18 +2,23 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
+import { thought, thoughts, thoughtFooter } from "../data/thought";
 ---
 
-<BaseLayout title="Thought — utahiroy" description="Ideas, reflections, and things worth sharing.">
+<BaseLayout
+  title="Thought — Utahiro Yoshimoto"
+  description="On sustainability, implementation, data, and the systems that shape real outcomes."
+>
   <Section>
     <div class="reveal max-w-2xl">
       <SectionLabel label="Thought" />
-      <h1 class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
-        How I Think
+      <h1
+        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+      >
+        {thought.headline}
       </h1>
       <p class="mt-6 text-lg leading-relaxed text-neutral-500">
-        Ideas, reflections, and references that shape my perspective.
-        A space for writing and thinking in public.
+        {thought.summary}
       </p>
     </div>
   </Section>
@@ -21,33 +26,25 @@ import SectionLabel from "../components/SectionLabel.astro";
   <Section narrow>
     <div class="reveal space-y-6">
       {
-        [
-          {
-            title: "On Building Things That Matter",
-            date: "2026",
-            excerpt:
-              "Thoughts on why the best work often comes from constraints, curiosity, and a willingness to start before you feel ready.",
-          },
-          {
-            title: "Simplicity as a Feature",
-            date: "2026",
-            excerpt:
-              "Why removing things is often harder — and more valuable — than adding them. A reflection on design and decision-making.",
-          },
-          {
-            title: "Learning in Public",
-            date: "2026",
-            excerpt:
-              "The case for sharing what you learn, even when you're not an expert. How openness accelerates growth.",
-          },
-        ].map((thought) => (
+        thoughts.map((entry) => (
           <article class="group rounded-2xl border border-neutral-200/80 bg-white p-6 transition-all duration-300 hover:border-sage-300 hover:shadow-md hover:shadow-sage-100/30">
-            <p class="text-xs font-medium text-neutral-400">{thought.date}</p>
-            <h3 class="mt-2 text-base font-semibold text-neutral-900 transition-colors group-hover:text-sage-700">
-              {thought.title}
+            <div class="flex items-center gap-3">
+              <p class="text-xs font-medium text-neutral-400">{entry.date}</p>
+              {entry.tags && (
+                <div class="flex gap-2">
+                  {entry.tags.map((tag) => (
+                    <span class="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px] font-medium text-neutral-400">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <h3 class="mt-3 text-base font-semibold text-neutral-900 transition-colors group-hover:text-sage-700">
+              {entry.title}
             </h3>
             <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-              {thought.excerpt}
+              {entry.excerpt}
             </p>
           </article>
         ))
@@ -58,7 +55,7 @@ import SectionLabel from "../components/SectionLabel.astro";
   <Section narrow>
     <div class="reveal text-center">
       <p class="text-sm text-neutral-400">
-        More thoughts coming soon. This space will grow over time.
+        {thoughtFooter}
       </p>
     </div>
   </Section>
