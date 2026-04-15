@@ -1,3 +1,32 @@
+# Portfolio Site — Project Instructions
+
+## Secretary 運用 (CEO ワークスペース連携)
+
+本 repo は `~/Documents/projects/portfolio-site/` 配下で管理される personal portfolio project。root の `~/Documents/CLAUDE.md` を読んだ上で本ファイルを参照すること。衝突時は本ファイルが優先。
+
+### 作業開始時に見るファイル
+1. `status.md` — 現在地 / Phase / 次アクション
+2. `tasks.md` — 進行中タスク
+3. `decisions.md` — 過去判断
+4. `links.md` — 主要 docs / components / deploy
+
+### 作業完了時に更新するファイル
+- `status.md` (Last updated を必ず)
+- `tasks.md` (todo / doing / done)
+- `log.md` (1 セッション 1 行以上)
+- `decisions.md` (技術選定 / デザイン方針の判断があれば)
+- 全社影響のある決定は `~/Documents/secretary/decisions.md` にも
+
+### project 固有ルール (要点)
+- 命名は lower-case + hyphen (root ルール)
+- コンテンツは `src/data/*.ts` を主に編集 (構造化データ)
+- デプロイ: `main` push → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages
+- 外部公開 repo (`utahiroy/utahiroy.github.io`) にそのまま commit/push される前提。機密情報を書かない
+- `.git` は現 zip 展開版には未同梱。必要なら外部 repo clone / remote 設定を別途行う
+- node_modules は gitignore 済。`npm install` で再現
+
+---
+
 # Project Overview
 
 This repository contains the source code for my personal portfolio website.
