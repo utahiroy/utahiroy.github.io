@@ -22,7 +22,7 @@
 - コンテンツは `src/data/*.ts` を主に編集 (構造化データ)
 - デプロイ: `main` push → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages
 - 外部公開 repo (`utahiroy/utahiroy.github.io`) にそのまま commit/push される前提。機密情報を書かない
-- `.git` は現 zip 展開版には未同梱。必要なら外部 repo clone / remote 設定を別途行う
+- `.git` は実在 (branch `main`、origin = `https://github.com/utahiroy/utahiroy.github.io.git` 接続済)。そのまま commit/push 可
 - node_modules は gitignore 済。`npm install` で再現
 
 ---

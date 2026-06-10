@@ -1,10 +1,10 @@
 # Tasks — portfolio-site
 
 ## doing
-- [ ] (P1) 外部 repo (`utahiroy/utahiroy.github.io`) との同期方針確定 — clone し直し or remote 追加
+- [x] (2026-06-09) 外部 repo との同期方針 — **解決済**: `.git` 実在・origin remote 接続済と判明 (旧「.git なし」は誤り)。以後は commit/push のみ
 
 ## todo
-- [ ] (P2) `src/data/*.ts` コンテンツ最新化 (Profile / Work / Thought)
+- [ ] (P1) `src/data/*.ts` コンテンツ最新化 (Profile / Work / Thought)
 - [ ] (P2) visual polish (typography, spacing, sage-green アクセント)
 - [ ] (P3) OG image / favicon / sitemap 最終確認
 - [ ] (P3) Lighthouse スコア確認
