@@ -64,3 +64,11 @@
   - projects/portfolio-site/src/data/photography.ts
 - 何が分かったか: (要記入)
 - 次にやること: (要記入)
+
+## 2026-07-16 — auto-logged session
+- session: 2026-07-16T23:04:57 → 2026-07-16T23:06:21
+- touched (2):
+  - projects/portfolio-site/src/data/photography.ts
+  - projects/portfolio-site/src/pages/photography.astro
+- 何が分かったか: (要記入)
+- 次にやること: (要記入)

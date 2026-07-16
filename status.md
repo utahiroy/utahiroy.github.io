@@ -15,7 +15,8 @@
 - deploy: `main` push → GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`)
 
 ## 進捗 (直近)
-- 2026-07-16 (第 2 弾): REQUEST_3 反映 (Hobby 8 カード化 + Profile「Beyond Work」+ Thought 13 本、地名等は抽象化) + ギャラリー拡充 20→41 枚 (ライブラリ全体から。a7 以外の iPhone/Canon も、日本 10 枚 + 米国立公園 5 枚など) + 全 42 枚に統一現像 (露出/WB/トーン/彩度、EXIF 除去)。Hobby 6/8 カードに写真
+- 2026-07-16 (第 3 弾): ギャラリーを **4 カテゴリ × 計 53 枚** に再構成 (Japan 13 / Mountains & Wild Places 20 / Cities & Streets 14 / Details & Small Hours 6)。+12 枚追加 (桜、九州草原、Zion、Yosemite Valley、Bonneville、Vienna、Budapest×2、Singapore、KL、Boston、釣り糸)
+- 2026-07-16 (第 2 弾): REQUEST_3 反映 (Hobby 8 カード化 + Profile「Beyond Work」+ Thought 13 本、地名等は抽象化) + ギャラリー拡充 20→41 枚 (ライブラリ全体から。a7 以外の iPhone/Canon も) + 全掲載写真に統一現像 (露出/WB/トーン/彩度、EXIF 除去)。Hobby 6/8 カードに写真
 - 2026-07-16 (第 1 弾): コンテンツ全面更新 (ローカル commit 済、**push は CEO 確認待ち**)
   - `/photography` 新設: Photos アプリ「a7」アルバム 4,706 枚から 20 枚選定 (favorite + Apple 美的スコア + 目視)。人物は風景・街のみ方針 (顔が識別できる人物なし、シルエット可)。EXIF/GPS 全除去済
   - Work ページ: LinkedIn 改修 (secretary/personal/linkedin-revamp.md) に完全準拠。ASUENE 3 ポジション + ISEP + E4G、Education、Skills 11 個、Certifications、FDE 方向性

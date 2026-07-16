@@ -2,12 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import SectionLabel from "../components/SectionLabel.astro";
-import { photography, photos, photographyFooter } from "../data/photography";
+import { photography, sections, photographyFooter } from "../data/photography";
 ---
 
 <BaseLayout
   title="Photography — Utahiro Yoshimoto"
-  description="Street and travel photography shot on a Sony α7 — from the Atacama Desert to Shanghai."
+  description="Street and travel photography — Japan, wild landscapes, cities, and the small hours in between."
 >
   <Section>
     <div class="reveal max-w-2xl">
@@ -26,33 +26,48 @@ import { photography, photos, photographyFooter } from "../data/photography";
     </div>
   </Section>
 
-  <Section>
-    <div class="reveal columns-1 gap-4 sm:columns-2 lg:columns-3">
-      {
-        photos.map((photo) => (
-          <figure class="mb-4 break-inside-avoid">
-            <div class="overflow-hidden rounded-2xl bg-neutral-100">
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
-                loading="lazy"
-                decoding="async"
-                class="h-auto w-full transition-transform duration-500 hover:scale-[1.02]"
-              />
-            </div>
-            <figcaption class="mt-2 mb-6 flex items-baseline justify-between gap-3 px-1">
-              <span class="text-xs text-neutral-500">{photo.caption}</span>
-              <span class="text-[10px] font-medium text-neutral-300">
-                {photo.year}
-              </span>
-            </figcaption>
-          </figure>
-        ))
-      }
-    </div>
-  </Section>
+  {
+    sections.map((section) => (
+      <Section>
+        <div class="reveal">
+          <div class="mb-8 flex items-baseline gap-4">
+            <h2 class="text-2xl font-bold tracking-tight text-neutral-900">
+              {section.title}
+            </h2>
+            <span class="text-xs font-medium text-neutral-300">
+              {section.photos.length}
+            </span>
+          </div>
+          <p class="-mt-6 mb-8 text-sm text-neutral-400">
+            {section.description}
+          </p>
+          <div class="columns-1 gap-4 sm:columns-2 lg:columns-3">
+            {section.photos.map((photo) => (
+              <figure class="mb-4 break-inside-avoid">
+                <div class="overflow-hidden rounded-2xl bg-neutral-100">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={photo.width}
+                    height={photo.height}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-auto w-full transition-transform duration-500 hover:scale-[1.02]"
+                  />
+                </div>
+                <figcaption class="mt-2 mb-6 flex items-baseline justify-between gap-3 px-1">
+                  <span class="text-xs text-neutral-500">{photo.caption}</span>
+                  <span class="text-[10px] font-medium text-neutral-300">
+                    {photo.year}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </Section>
+    ))
+  }
 
   <Section narrow>
     <div class="reveal text-center">
