@@ -3,7 +3,7 @@
 > 1 行サマリ: `utahiroy.github.io` 個人ポートフォリオサイト。Astro + TS + Tailwind v4 + React + Framer Motion。GitHub Pages deploy。
 
 - **Phase**: active (content & polish)
-- **Last updated**: 2026-07-16
+- **Last updated**: 2026-07-16 (live 公開済み。Liquid Glass + 日本語ページ + a7 限定 42 枚)
 - **Owner**: CEO
 - **Live**: https://utahiroy.github.io
 - **External repo**: `https://github.com/utahiroy/utahiroy.github.io.git` (origin remote 接続済)
@@ -25,8 +25,8 @@
   - Hobby: Photography カードに α7 + ギャラリーリンク + 写真
 - 2026-06-09: status/CLAUDE の「.git なし」誤記述を訂正
 
-## ブロッカー
-- **repo が private 化され Pages が停止中 (live 404、2026-07-16 判明)**。CEO が Settings → Danger Zone → Make public に戻す必要あり (アクセス権限変更のため Claude は実施不可)。復旧後に push で再デプロイ
+## ブロッカー (解消済)
+- なし。repo public 復旧 (CEO) → 2 push (a6fc92e, 5a84478) → deploy success、全ページ 200 確認済 (2026-07-16)
 
 ## 次アクション (top 3)
 1. **CEO レビュー → `main` push** (写真 21 枚 + 全文更新の公開確認。特にキャプション地名: Salar de Uyuni / オーロラ=Minnesota / Canadian Rockies)
