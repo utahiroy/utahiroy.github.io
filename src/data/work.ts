@@ -87,6 +87,34 @@ export const experience: Experience[] = [
   },
 ];
 
+/** ASUENE's public MVV (source: corp.asuene.com). Quoted because I genuinely run on it. */
+export const asueneMvv = {
+  label: "ASUENE MVV",
+  title: "The Mission I Work Under",
+  mission: {
+    ja: "次世代によりよい世界を。",
+    en: "Changing the world for the next generation.",
+  },
+  vision: {
+    ja: "次世代を変える会社",
+    en: "Leading transformative change for the next generation.",
+  },
+  values: [
+    "Radical Ownership, Total Accountability",
+    "Act with Integrity. Think from the Other Side.",
+    "Speed Is Our Ultimate Advantage",
+    "Productivity-Driven. Never Satisfied. Always Hungry.",
+    "One for All, All for One",
+    "Ownership of Results",
+    "All In on AI",
+    "Beyond No.1. Become the Category Leader.",
+    "Measure to Improve (KAIZEN)",
+    "Challenge with a Positive Mindset",
+  ],
+  note: "I didn't join in spite of the culture — the culture is a big part of why I'm there. Of the ten values, the three I lean on hardest are Radical Ownership, Speed Is Our Ultimate Advantage, and All In on AI: they describe how I already wanted to work. And the mission is my own axis, stated as a company.",
+  source: "https://corp.asuene.com/en/company",
+};
+
 export interface Education {
   school: string;
   program: string;
