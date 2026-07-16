@@ -96,9 +96,5 @@ export const hobbies: Hobby[] = [
       "Watching and following sports — the strategy, the momentum shifts, and the stories that unfold within structure and constraint.",
     details:
       "I appreciate the discipline and systems thinking that competitive sports demand, both from athletes and from the organizations around them.",
-    image: {
-      src: "/photos/baseball-dusk.jpg",
-      alt: "A baseball stadium at dusk",
-    },
   },
 ];

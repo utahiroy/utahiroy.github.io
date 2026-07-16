@@ -33,6 +33,8 @@
 /* ── Base ── */
 @layer base {
   html {
+    /* Larger base type across the whole site (rem-based sizes scale with this) */
+    font-size: 17.5px;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

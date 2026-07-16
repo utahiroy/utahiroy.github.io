@@ -13,11 +13,11 @@ import { hobby, hobbies } from "../data/hobby";
     <div class="reveal max-w-2xl">
       <SectionLabel label="Hobby" />
       <h1
-        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+        class="text-5xl font-bold tracking-tight text-neutral-900 sm:text-6xl"
       >
         {hobby.headline}
       </h1>
-      <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+      <p class="mt-8 text-xl leading-relaxed text-neutral-500">
         {hobby.summary}
       </p>
     </div>
@@ -43,21 +43,21 @@ import { hobby, hobbies } from "../data/hobby";
                 </div>
               )}
             </div>
-            <h3 class="mt-4 text-base font-semibold text-neutral-900">
+            <h3 class="mt-4 text-lg font-semibold text-neutral-900">
               {item.title}
             </h3>
-            <p class="mt-1 text-sm leading-relaxed text-neutral-500">
+            <p class="mt-2 text-base leading-relaxed text-neutral-500">
               {item.description}
             </p>
             {item.details && (
-              <p class="mt-2 text-xs leading-relaxed text-neutral-400">
+              <p class="mt-2 text-sm leading-relaxed text-neutral-400">
                 {item.details}
               </p>
             )}
             {item.href && (
               <a
                 href={item.href}
-                class="mt-3 inline-flex items-center text-xs font-medium text-sage-600 transition-colors hover:text-sage-700"
+                class="mt-3 inline-flex items-center text-sm font-medium text-sage-600 transition-colors hover:text-sage-700"
               >
                 View the gallery &rarr;
               </a>
