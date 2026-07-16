@@ -14,20 +14,32 @@ import {
 
 <BaseLayout
   title="Profile — Utahiro Yoshimoto"
-  description="Background, values, and direction — from Japan to the U.S., across environmental science, policy, and data."
+  description="Background, values, and direction — ESG consulting, AI automation, and one axis: cut CO2, early and at scale."
 >
   <!-- Header -->
   <Section>
-    <div class="reveal max-w-2xl">
-      <SectionLabel label="Profile" />
-      <h1
-        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
-      >
-        {profile.headline}
-      </h1>
-      <p class="mt-6 text-lg leading-relaxed text-neutral-500">
-        {profile.summary}
-      </p>
+    <div class="reveal grid items-center gap-10 md:grid-cols-5">
+      <div class="md:col-span-3">
+        <SectionLabel label="Profile" />
+        <h1
+          class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+        >
+          {profile.headline}
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+          {profile.summary}
+        </p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src={profile.portrait.src}
+          alt={profile.portrait.alt}
+          width={profile.portrait.width}
+          height={profile.portrait.height}
+          decoding="async"
+          class="w-full rounded-2xl object-cover"
+        />
+      </div>
     </div>
   </Section>
 

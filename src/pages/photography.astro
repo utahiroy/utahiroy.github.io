@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import { photography, photos, photographyFooter } from "../data/photography";
+---
+
+<BaseLayout
+  title="Photography — Utahiro Yoshimoto"
+  description="Street and travel photography shot on a Sony α7 — from the Atacama Desert to Shanghai."
+>
+  <Section>
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="Photography" />
+      <h1
+        class="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl"
+      >
+        {photography.headline}
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-neutral-500">
+        {photography.summary}
+      </p>
+      <p class="mt-4 text-xs font-medium tracking-wide text-sage-600 uppercase">
+        {photography.camera}
+      </p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="reveal columns-1 gap-4 sm:columns-2 lg:columns-3">
+      {
+        photos.map((photo) => (
+          <figure class="mb-4 break-inside-avoid">
+            <div class="overflow-hidden rounded-2xl bg-neutral-100">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                loading="lazy"
+                decoding="async"
+                class="h-auto w-full transition-transform duration-500 hover:scale-[1.02]"
+              />
+            </div>
+            <figcaption class="mt-2 mb-6 flex items-baseline justify-between gap-3 px-1">
+              <span class="text-xs text-neutral-500">{photo.caption}</span>
+              <span class="text-[10px] font-medium text-neutral-300">
+                {photo.year}
+              </span>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal text-center">
+      <p class="text-sm text-neutral-400">
+        {photographyFooter}
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

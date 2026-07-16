@@ -7,13 +7,13 @@ export const site = {
   name: "Utahiro Yoshimoto",
 
   /** The one-line positioning statement shown in the hero. */
-  tagline: "Sustainability × Data × Implementation.",
+  tagline: "ESG consulting × AI automation × data.",
 
   /** Supporting sentence beneath the tagline. */
   intro:
-    "I work at the intersection of environmental science, policy, and data — turning sustainability frameworks into structured, evidence-based systems that organizations can actually use.",
+    "I'm an ESG consultant at ASUENE who automates the work behind sustainability. One axis: cut CO2, early and at scale.",
 
   /** Short site-wide description used in meta tags. */
   description:
-    "Utahiro Yoshimoto — sustainability, data, and implementation. ESG analysis, GX research, and building toward Sustainability AI Auditing.",
+    "Utahiro Yoshimoto — ESG consultant automating sustainability work with AI. Supply-chain decarbonization, ESG ratings and disclosure, ontology-driven AI workflows. Tokyo.",
 };

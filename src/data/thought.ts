@@ -1,5 +1,6 @@
 /**
  * Thought page content.
+ * Positions I actually hold — kept short, written to be argued with.
  * Edit this file to add/remove thought entries.
  */
 
@@ -13,46 +14,88 @@ export interface ThoughtEntry {
 export const thought = {
   headline: "How I Think",
   summary:
-    "Ideas, questions, and observations that shape my perspective on sustainability, technology, and how systems actually change. A space for thinking in progress.",
+    "Positions I actually hold — on sustainability, AI, and how to run a life. Not neutral observations: each of these is a claim, and each one has counterarguments I take seriously.",
 };
 
 export const thoughts: ThoughtEntry[] = [
   {
-    title: "Disclosure Is Not the Same as Accountability",
+    title: "The Physical and the Institutional Are One System",
     date: "2026",
     excerpt:
-      "Most sustainability disclosure today is retrospective and self-reported. It tells you what an organization says it did, not what actually happened. Real accountability requires independent verification, structured data, and systems that make evasion harder than compliance. The next generation of ESG infrastructure needs to close this gap.",
-    tags: ["ESG", "Disclosure", "Accountability"],
+      "Sustainability work matters because natural systems and human systems are one system, not two. Emissions and energy belong in the same model as economics, policy, and behavior — and you cannot fix the physical without changing the institutional. That is why I studied environmental science and work in consulting rather than choosing between them.",
+    tags: ["Sustainability", "Systems"],
   },
   {
-    title: "The Case for Real-Time Environmental Monitoring",
+    title: "Give Sustainability Data a Structure",
     date: "2026",
     excerpt:
-      "Static annual reports are a poor proxy for ongoing environmental performance. Sensors, satellite data, and AI-driven analysis are making continuous monitoring technically feasible — the question is whether institutions and frameworks will adapt fast enough to use it. Moving from periodic to real-time assessment changes not just what we measure, but how decisions get made.",
-    tags: ["AI", "Monitoring", "Environment"],
+      "ESG runs on static, once-a-year documents. The fix is structural: an ontology that links companies, emissions, disclosures, and supply-chain signals, with LLMs turning unstructured reports into data and agents taking the repeatable analysis. Decisions should run on a live, connected model of ESG reality — not on last year's spreadsheet.",
+    tags: ["AI", "Ontology", "ESG"],
   },
   {
-    title: "Implementation as the Hard Part",
+    title: "The Same AI Can Help or Harm — Governance Decides",
     date: "2026",
     excerpt:
-      "Sustainability frameworks are abundant. What's scarce is the work of turning them into structured, repeatable, verifiable systems that function in real organizations with real constraints. The bottleneck is rarely the policy — it's the implementation layer where data, process, and human behavior all have to align.",
-    tags: ["Implementation", "Systems", "Policy"],
+      "AI's impact is not a property of the technology; it depends on who owns it, what it gets pointed at, and how it is governed. I would rather point it at emissions and climate policy, and stand on the side of the economy that creates value rather than only moves money.",
+    tags: ["AI", "Governance"],
   },
   {
-    title: "Reproducibility Should Be a Default, Not a Feature",
+    title: "Implementation Is the Hard Part",
     date: "2026",
     excerpt:
-      "In research, analysis, and decision-making, reproducibility means someone else can follow your reasoning, check your work, and arrive at the same conclusion. Too much sustainability analysis is opaque by design. Building reproducible processes isn't just good practice — it's a prerequisite for trust.",
-    tags: ["Data", "Reproducibility", "Trust"],
+      "Sustainability frameworks are abundant. What's scarce is the work of turning them into structured, repeatable systems that function in real organizations with real constraints. The bottleneck is rarely the policy — it's the implementation layer, where data, process, and human behavior all have to align.",
+    tags: ["Implementation", "Systems"],
   },
   {
-    title: "Where Policy Meets Technology Meets Context",
+    title: "Declare It First",
     date: "2026",
     excerpt:
-      "The most useful work tends to happen at intersections — where policy goals, technical capability, and local context all inform each other. Working across these boundaries is slower and messier than staying in one lane, but it produces solutions that actually survive contact with reality.",
-    tags: ["Interdisciplinary", "Policy", "Technology"],
+      "Big goals should be said out loud before they look realistic. Declaration is not bragging; it is a commitment device. I know from experience that once I have declared something, my behavior reorganizes itself to catch up — so the declaration comes first, with milestones attached to keep the ambition accountable.",
+    tags: ["Career", "Mindset"],
+  },
+  {
+    title: "'You're Living Too Fast' Is a Compliment",
+    date: "2026",
+    excerpt:
+      "Start things early — today is the youngest you will ever be. Run many experiments instead of a few careful ones, and stack touched-and-experienced over saw-and-heard. The risk of hurry is real: burnout, shallow learning, missed exits. I take the trade anyway, because first-hand volume is what everything else compounds on.",
+    tags: ["Mindset", "Learning"],
+  },
+  {
+    title: "Early Means Nobody Around You Has Touched It",
+    date: "2026",
+    excerpt:
+      "My test for whether a theme is genuinely early: nobody in your home prefecture is on it yet. By the time something is a topic, the most interesting people have already moved on. Crypto and AI both fail this test now. The bar is not 'new to the news' — it's 'the only people there are builders with first-hand information.'",
+    tags: ["Timing", "Strategy"],
+  },
+  {
+    title: "You Are You, I Am I",
+    date: "2026",
+    excerpt:
+      "Don't hand your life over to other people's judgments, and don't run other people's lives either. Mutual non-interference, with each person owning the results of their own choices. It has limits — family and teams run on cooperation, not independence — but as a default posture, self-determination beats consensus-seeking.",
+    tags: ["Life", "Autonomy"],
+  },
+  {
+    title: "Growth Means More Value Creators",
+    date: "2026",
+    excerpt:
+      "An economy grows by adding people who create new value — technology, products, companies, jobs — not only people who circulate existing money. Consumption industries are legitimate and someone has to run them well. But if the question is what a country should want more of, the answer is builders.",
+    tags: ["Economy", "Society"],
+  },
+  {
+    title: "Stop Saying 'the West'",
+    date: "2026",
+    excerpt:
+      "Japan lumps the US and Europe into one word, and the resolution collapses the moment you do. The US works long hours, competes hard, and life there is expensive and unforgiving; Europe runs on a different labor contract entirely. Having lived in the US, I flinch every time 'the West' is used to mean 'relaxed.' Split them first, then argue.",
+    tags: ["Culture", "US"],
+  },
+  {
+    title: "Born 2000–2003: The Lucky Window",
+    date: "2026",
+    excerpt:
+      "My cohort got an analog childhood — trading cards, handheld consoles, secret bases — and then hit social media and smartphones in adolescence. We are the last generation whose childhood attention wasn't captured by feeds, and still native to the tools that followed. Every generation has its own edge; this one happens to be mine, so I try to use both halves deliberately.",
+    tags: ["Generation", "Attention"],
   },
 ];
 
 export const thoughtFooter =
-  "This space will grow as I continue to develop and articulate these ideas. Some of these are early-stage observations; others reflect questions I've been thinking about for a while.";
+  "These are working positions, not settled conclusions. Some will survive contact with better arguments; others won't — that's what they're for.";

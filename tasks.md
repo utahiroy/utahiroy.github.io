@@ -1,15 +1,20 @@
 # Tasks — portfolio-site
 
 ## doing
-- [x] (2026-06-09) 外部 repo との同期方針 — **解決済**: `.git` 実在・origin remote 接続済と判明 (旧「.git なし」は誤り)。以後は commit/push のみ
+- [ ] (P1) CEO レビュー → `main` push → GitHub Pages 反映確認 (2026-07-16 のコンテンツ全面更新はローカル commit 済)
 
 ## todo
-- [ ] (P1) `src/data/*.ts` コンテンツ最新化 (Profile / Work / Thought)
 - [ ] (P2) visual polish (typography, spacing, sage-green アクセント)
+- [ ] (P2) 写真キャプション地名の CEO 確認 (Salar de Uyuni / オーロラ=Minnesota / Canadian Rockies / latte-art の場所)
+- [ ] (P3) Hobby の残りカード (Sports / Music / Technology) の写真 or placeholder 整理
 - [ ] (P3) OG image / favicon / sitemap 最終確認
 - [ ] (P3) Lighthouse スコア確認
 
 ## done (直近)
+- [x] (2026-07-16) `/photography` 新設 (a7 アルバムから 20 枚選定、EXIF/GPS 除去)
+- [x] (2026-07-16) Work を LinkedIn 完全準拠に更新 (ASUENE 3 職 / ISEP / E4G / Education / Skills 11 / Certifications)
+- [x] (2026-07-16) Profile 更新 (東京 + ESG×AI + 丸の内ポートレート) / Thought 持論 11 本 / Home・Hobby・site.ts 整合
+- [x] (2026-06-09) 外部 repo との同期方針 — 解決済 (`.git` 実在・origin 接続済)
 - [x] (2026-04-15) `~/Documents/projects/portfolio-site/` への移設・Secretary 統合
 
 ## 凡例

@@ -7,6 +7,10 @@ export interface Hobby {
   title: string;
   description: string;
   details?: string;
+  /** Optional card image (lives in /public/photos/). */
+  image?: { src: string; alt: string };
+  /** Optional link (e.g. to the photography gallery). */
+  href?: string;
 }
 
 export const hobby = {
@@ -21,7 +25,12 @@ export const hobbies: Hobby[] = [
     description:
       "A way to slow down and pay attention. I'm drawn to composition, light, and the small details that most people walk past.",
     details:
-      "Mostly street and travel photography. Less about perfect technique, more about noticing something worth capturing.",
+      "Mostly street and travel photography, shot on a Sony α7. Less about perfect technique, more about noticing something worth capturing.",
+    image: {
+      src: "/photos/suzhou-lantern-alley.jpg",
+      alt: "Red lanterns above a busy evening alley in Suzhou",
+    },
+    href: "/photography",
   },
   {
     title: "Sports",
@@ -36,6 +45,10 @@ export const hobbies: Hobby[] = [
       "Experiencing different cities, cultures, and systems firsthand. Every trip recalibrates how I think about my own assumptions.",
     details:
       "I pay attention to how cities are designed, how people move through spaces, and how local context shapes everything from food to infrastructure.",
+    image: {
+      src: "/photos/machu-picchu.jpg",
+      alt: "Machu Picchu seen from above",
+    },
   },
   {
     title: "Music & Expression",
