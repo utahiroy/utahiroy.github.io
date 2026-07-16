@@ -1,10 +1,12 @@
 # Tasks — portfolio-site
 
 ## doing
-- [ ] (P1) CEO レビュー → `main` push → GitHub Pages 反映確認 (2026-07-16 のコンテンツ全面更新はローカル commit 済)
+- なし (2026-07-17 時点、live 反映済み)
 
 ## todo
-- [ ] (P2) visual polish (typography, spacing, sage-green アクセント)
+- [ ] (P2) Codex レビュー残 7 件: 本文コントラスト全面再計測 / JA alt テキスト辞書 / 言語トグルの #hash・?query 保持 / mask-composite の @supports フォールバック / 見出し階層 (h2 と h3 の飛び) / 未使用翻訳データ整理 / ナビのアクティブ項目 scrollIntoView
+- [ ] (P2) 味覚 4 象限の「軸」定義を CEO から聞いて Thought 記事を厚くする
+- [ ] (P2) 実機スマホでの表示確認 (シミュレートのみ実施済)
 - [ ] (P2) 写真キャプション地名の CEO 確認 (Salar de Uyuni / オーロラ=Minnesota / Canadian Rockies / latte-art の場所)
 - [ ] (P3) Hobby の残りカード (Sports / Music / Technology) の写真 or placeholder 整理
 - [ ] (P3) OG image / favicon / sitemap 最終確認

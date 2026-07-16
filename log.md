@@ -113,3 +113,8 @@
   - projects/portfolio-site/src/data/ja.ts
 - 何が分かったか: (要記入)
 - 次にやること: (要記入)
+
+## 2026-07-17 — Liquid Glass 完全版・思想 17 本・スマホ対応・Codex 監査 2 巡
+- 何をしたか: (1) Liquid Glass v2 (屈折エッジリング、スクロール縮小ナビ、スプリング反応、同心円角丸)。(2) 思想を 17 本に (beliefs 全 8 本 + 新持論 3 本を beliefs.md へ初記録の上掲載)。(3) タグライン刷新 (仕事寄り解消)。(4) スマホ対応 (横スクロールピルナビ、blur 軽減、blob クリップ)。(5) Codex gpt-5.6-sol 監査 2 巡 = コピー 19 件 + コード 10 件適用 (a11y: aria-current/focus-visible/reduced-motion、JA ラベル漏れ等)
+- 何が分かったか: デプロイ直後の「崩れ」は Pages の HTML 10 分キャッシュ × ハッシュ付き CSS の不整合 (ハードリロードで解消、恒久対処不要)。codex CLI は 0.144+ で gpt-5.6-sol 対応
+- 次にやること: tasks.md の Codex 残 7 件、味覚 4 象限の軸ヒアリング、実機スマホ確認
