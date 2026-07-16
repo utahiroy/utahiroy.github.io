@@ -61,6 +61,20 @@ export const thoughts: ThoughtEntry[] = [
     tags: ["Mindset", "Learning"],
   },
   {
+    title: "Experience First, Then Judge",
+    date: "2026",
+    excerpt:
+      "Reviews, rankings, and spec sheets are starting points, not conclusions. For places, gear, and food alike, I research in detail — then walk it, use it, taste it before deciding. The best choice for everyone else is regularly not the best choice for you.",
+    tags: ["Judgment", "Experience"],
+  },
+  {
+    title: "Food Is How You Read a Place",
+    date: "2026",
+    excerpt:
+      "Where I travel gets decided by what people eat there — especially fish. Not the famous restaurant: the port, the market, the everyday diner. Season, landing port, preparation. Treat a meal as an entry point into a region's nature, industry, and history, and every lunch becomes fieldwork.",
+    tags: ["Travel", "Food"],
+  },
+  {
     title: "Early Means Nobody Around You Has Touched It",
     date: "2026",
     excerpt:

@@ -7,6 +7,7 @@ import {
   background,
   values,
   approach,
+  life,
   outlook,
   glance,
 } from "../data/profile";
@@ -99,6 +100,18 @@ import {
           ))
         }
       </div>
+    </div>
+  </Section>
+
+  <!-- Beyond Work -->
+  <Section>
+    <div class="reveal max-w-2xl">
+      <h2 class="text-xl font-semibold text-neutral-900">{life.title}</h2>
+      {
+        life.paragraphs.map((p) => (
+          <p class="mt-4 text-base leading-relaxed text-neutral-600">{p}</p>
+        ))
+      }
     </div>
   </Section>
 

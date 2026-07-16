@@ -16,7 +16,7 @@ export interface Hobby {
 export const hobby = {
   headline: "What I Enjoy",
   summary:
-    "The interests and experiences that balance the analytical side — a personal archive that grows over time.",
+    "The interests that balance the analytical side. None of them stays in its lane — a trip turns into food research, a history walk, and the right playlist for the drive.",
 };
 
 export const hobbies: Hobby[] = [
@@ -33,35 +33,72 @@ export const hobbies: Hobby[] = [
     href: "/photography",
   },
   {
-    title: "Sports",
+    title: "DJ & Music",
     description:
-      "Watching and following sports — the strategy, the momentum shifts, and the stories that unfold within structure and constraint.",
+      "Listening widely, and learning to mix — a Pioneer DJ controller and a pair of Yamaha studio monitors sit on my desk.",
     details:
-      "I appreciate the discipline and systems thinking that competitive sports demand, both from athletes and from the organizations around them.",
+      "The fun is in the transitions: tempo, energy, and mood lining up so the room shifts without noticing. I chose the monitors for accuracy over hyped bass — I research gear against room, use, and budget, then actually buy it and use it. Someday I want to play small gatherings and bars, not just my desk.",
+  },
+  {
+    title: "Lakes & Nature",
+    description:
+      "I have a thing for lakes — a stillness different from the sea, and the way mountains, towns, and water sit close together in one view.",
+    details:
+      "I compare lakeside regions across Japan the way other people compare neighborhoods: transport, climate, winters, everyday life. The long-term picture is a house near the water with my family, ideally with a boat, and the city still within reach.",
+    image: {
+      src: "/photos/hallstatt-lakefront.jpg",
+      alt: "A lakeside village beneath steep mountains",
+    },
   },
   {
     title: "Travel",
     description:
-      "Experiencing different cities, cultures, and systems firsthand. Every trip recalibrates how I think about my own assumptions.",
+      "Cities, port towns, hot springs, old streets — I travel to understand why a place became what it is, at home and abroad.",
     details:
-      "I pay attention to how cities are designed, how people move through spaces, and how local context shapes everything from food to infrastructure.",
+      "Fewer stops, longer looks: I'd rather walk one town properly than collect ten viewpoints in a day. That includes places with hard histories — I want to see how regions hit by disaster remember it and rebuild.",
     image: {
       src: "/photos/machu-picchu.jpg",
       alt: "Machu Picchu seen from above",
     },
   },
   {
-    title: "Music & Expression",
+    title: "Food & Fish",
     description:
-      "Listening, discovering, and using music as a way to shift perspective. Playlists as a form of personal curation.",
+      "Where I travel gets decided partly by what's on the table there. Fish above all — ports, markets, and the local diner over the famous restaurant.",
     details:
-      "Music is one of the few things I consume without trying to optimize it. It's a space for intuition over analysis.",
+      "Season, landing port, preparation: food is the fastest way into a region's nature, industry, and history, not just a reward at the end of the day.",
+    image: {
+      src: "/photos/shanghai-dumplings.jpg",
+      alt: "Xiaolongbao in a bamboo steamer",
+    },
   },
   {
-    title: "Technology & IoT",
+    title: "History & Street Walks",
     description:
-      "Curiosity about how sensors, connected devices, and data systems are reshaping everyday environments.",
+      "Old streets, shrines, castle grounds — I read them as systems: what was this place for, and what of it still shapes today's town?",
     details:
-      "This interest connects directly to my professional direction — understanding how physical-world data can be captured, structured, and made useful.",
+      "Dates and names interest me less than function — a castle matters as a seat of politics and administration, not as a big building. Finding the old structure inside the current city is the game.",
+    image: {
+      src: "/photos/temple-hall.jpg",
+      alt: "A temple hall with golden roof ornaments",
+    },
+  },
+  {
+    title: "Cross-Cultural Exchange",
+    description:
+      "Living in both Japan and the US taught me to read differences as differences — habits, education, relationships, work — not as rankings.",
+    details:
+      "I enjoy explaining Japan to visitors. I once guided a tour group from abroad through a historic castle town: no jargon, one or two reasons why each spot matters, and time to just look. Explaining a place to someone with no shared context teaches you what actually matters about it.",
+  },
+  {
+    title: "Sports",
+    description:
+      "Watching and following sports — the strategy, the momentum shifts, and the stories that unfold within structure and constraint.",
+    details:
+      "I appreciate the discipline and systems thinking that competitive sports demand, both from athletes and from the organizations around them.",
+    image: {
+      src: "/photos/baseball-dusk.jpg",
+      alt: "A baseball stadium at dusk",
+    },
   },
 ];

@@ -73,6 +73,15 @@ export const approach = {
   ],
 };
 
+export const life = {
+  title: "Beyond Work",
+  paragraphs: [
+    "Japan is home base. The years in the US matter to me, and I want to keep the ties — English, travel, friends across cultures — but everyday life belongs here, with regular trips out rather than a life abroad.",
+    "Long term, I want daily life closer to nature without cutting the line to the city: a reasonably spacious house near a lake, water and mountains visible from the window, my family around, a boat if I can manage it — and the city still within easy reach.",
+    "Across places, gear, and food, the rule is the same: research in detail, then go, use, or taste it myself before judging. And I'd rather connect interests than max one out — a trip to a lakeside town becomes local history, the day's catch, and the right playlist for the drive.",
+  ],
+};
+
 export const outlook = {
   title: "Where I'm Headed",
   description:
