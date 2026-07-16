@@ -78,7 +78,7 @@ const nowItems = ja ? homeJa.nowItems : nowItemsEn;
       <div class="reveal reveal-delay-5 mt-10">
         <a
           href="#explore"
-          class="inline-flex items-center gap-2 text-sm font-medium text-sage-600 transition-colors hover:text-sage-700"
+          class="glass glass-interactive inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-sage-700"
         >
           <span>{ja ? "スクロールして見る" : "Scroll to explore"}</span>
           <svg
@@ -101,7 +101,9 @@ const nowItems = ja ? homeJa.nowItems : nowItemsEn;
     <div
       class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.03]"
     >
-      <div class="h-[600px] w-[600px] rounded-full bg-sage-400 blur-[128px]">
+      <div
+        class="drift h-[600px] w-[600px] rounded-full bg-sage-400 blur-[128px]"
+      >
       </div>
     </div>
   </section>
@@ -210,7 +212,7 @@ const nowItems = ja ? homeJa.nowItems : nowItemsEn;
   <Section narrow>
     <div class="reveal">
       <SectionLabel label="Now" />
-      <div class="glass rounded-2xl p-8">
+      <div class="glass rounded-3xl p-9">
         <h2 class="text-lg font-semibold text-neutral-900">
           {ja ? homeJa.nowTitle : "Current Focus"}
         </h2>

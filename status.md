@@ -3,7 +3,7 @@
 > 1 行サマリ: `utahiroy.github.io` 個人ポートフォリオサイト。Astro + TS + Tailwind v4 + React + Framer Motion。GitHub Pages deploy。
 
 - **Phase**: active (content & polish)
-- **Last updated**: 2026-07-16 (live 公開済み。Liquid Glass + 日本語ページ + a7 限定 42 枚)
+- **Last updated**: 2026-07-17
 - **Owner**: CEO
 - **Live**: https://utahiroy.github.io
 - **External repo**: `https://github.com/utahiroy/utahiroy.github.io.git` (origin remote 接続済)

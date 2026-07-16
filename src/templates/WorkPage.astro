@@ -81,7 +81,7 @@ const t = ja
       <div class="space-y-6">
         {
           t.experience.map((job) => (
-            <div class="glass rounded-2xl p-6 md:p-8">
+            <div class="glass glass-interactive rounded-3xl p-7 md:p-9">
               <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                 <h3 class="text-lg font-semibold text-neutral-900">
                   {job.role}
@@ -120,7 +120,7 @@ const t = ja
 
   <!-- ASUENE MVV -->
   <Section>
-    <div class="reveal glass-sage rounded-2xl p-8 md:p-10">
+    <div class="reveal glass-sage rounded-[2rem] p-8 md:p-11">
       <SectionLabel label={t.mvvLabel} />
       <h2 class="text-lg font-semibold text-neutral-900">
         {t.mvvTitle}
@@ -167,7 +167,7 @@ const t = ja
       <div class="grid gap-6 sm:grid-cols-2">
         {
           t.education.map((school) => (
-            <div class="glass rounded-2xl p-6">
+            <div class="glass rounded-3xl p-7">
               <h3 class="text-base font-semibold text-neutral-900">
                 {school.school}
               </h3>
@@ -191,7 +191,7 @@ const t = ja
       <div class="grid gap-6 sm:grid-cols-2">
         {
           t.areas.map((area) => (
-            <div class="glass rounded-2xl p-6">
+            <div class="glass rounded-3xl p-7">
               <h3 class="text-base font-semibold text-neutral-900">
                 {area.name}
               </h3>
@@ -241,7 +241,7 @@ const t = ja
 
   <!-- Current Direction -->
   <Section narrow>
-    <div class="reveal glass-sage rounded-2xl p-8">
+    <div class="reveal glass-sage rounded-[2rem] p-9">
       <h2 class="text-lg font-semibold text-neutral-900">
         {t.direction.title}
       </h2>

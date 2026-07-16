@@ -55,7 +55,7 @@ const slugify = (title: string, i: number) => `section-${i + 1}`;
           t.sections.map((section, i) => (
             <a
               href={`#${slugify(section.title, i)}`}
-              class="glass rounded-full px-5 py-2 text-sm font-medium text-neutral-600 transition-all hover:text-sage-700 hover:-translate-y-0.5"
+              class="glass glass-interactive rounded-full px-5 py-2 text-sm font-medium text-neutral-600 hover:text-sage-700"
             >
               {section.title}
               <span class="ml-1.5 text-neutral-300">

@@ -24,6 +24,7 @@ const togglePath = ja
 
 <header class="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
   <nav
+    id="site-nav"
     class="glass-nav flex items-center gap-2 rounded-full py-2 pr-2 pl-6 sm:gap-5"
   >
     <a
@@ -66,3 +67,21 @@ const togglePath = ja
     </ul>
   </nav>
 </header>
+
+<script>
+  // iOS-style nav: compact while scrolling down, expand on scroll up
+  const nav = document.getElementById("site-nav");
+  let last = 0;
+  addEventListener(
+    "scroll",
+    () => {
+      const y = scrollY;
+      if (nav) {
+        if (y > 96 && y > last + 2) nav.classList.add("nav-compact");
+        else if (y < last - 2 || y < 96) nav.classList.remove("nav-compact");
+      }
+      last = y;
+    },
+    { passive: true },
+  );
+</script>

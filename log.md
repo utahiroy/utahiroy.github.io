@@ -87,3 +87,22 @@
   - projects/portfolio-site/src/pages/profile.astro
 - 何が分かったか: (要記入)
 - 次にやること: (要記入)
+
+## 2026-07-17 — auto-logged session
+- session: 2026-07-16T23:57:52 → 2026-07-17T00:00:52
+- touched (5):
+  - projects/portfolio-site/src/components/Header.astro
+  - projects/portfolio-site/src/data/ja.ts
+  - projects/portfolio-site/src/data/thought.ts
+  - projects/portfolio-site/src/styles/global.css
+  - projects/portfolio-site/src/templates/HomePage.astro
+- 何が分かったか: (要記入)
+- 次にやること: (要記入)
+
+## 2026-07-17 — auto-logged session
+- session: 2026-07-17T00:03:11 → 2026-07-17T00:05:46
+- touched (2):
+  - projects/portfolio-site/src/data/ja.ts
+  - projects/portfolio-site/src/data/thought.ts
+- 何が分かったか: (要記入)
+- 次にやること: (要記入)

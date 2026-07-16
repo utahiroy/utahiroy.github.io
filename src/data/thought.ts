@@ -75,6 +75,27 @@ export const thoughts: ThoughtEntry[] = [
     tags: ["Travel", "Food"],
   },
   {
+    title: "Keep Your Own Theories — Street Smarts × Book Smarts",
+    date: "2026",
+    excerpt:
+      "I treasure my own working theories; this page is where they live. And on how to build them: street smarts and book smarts are not rival camps. Take the best of each — theories tested on the pavement, experience organized by what's already been written.",
+    tags: ["Learning", "Mindset"],
+  },
+  {
+    title: "Taste Is a Map, Not a Ladder",
+    date: "2026",
+    excerpt:
+      "Stop ranking food on one axis from good to bad. Plot it on two axes — a quadrant map — and dishes stop competing for height and start occupying positions. The stronger claim: a food culture that can fill all four quadrants is a good food culture, because covering the map means having the right answer for every mood and situation.",
+    tags: ["Food", "Frameworks"],
+  },
+  {
+    title: "Drinks With Texture Sell",
+    date: "2026",
+    excerpt:
+      "Give a drink something to chew — pearls, pulp, jelly — and it sells. Texture turns a beverage from something consumed in the background into an event. I'd like proper data, but the lineage from bubble tea onward keeps backing it up.",
+    tags: ["Food", "Products"],
+  },
+  {
     title: "Early Means Nobody Around You Has Touched It",
     date: "2026",
     excerpt:
@@ -101,6 +122,13 @@ export const thoughts: ThoughtEntry[] = [
     excerpt:
       "Japan lumps the US and Europe into one word, and the resolution collapses the moment you do. The US works long hours, competes hard, and life there is expensive and unforgiving; Europe runs on a different labor contract entirely. Having lived in the US, I flinch every time 'the West' is used to mean 'relaxed.' Split them first, then argue.",
     tags: ["Culture", "US"],
+  },
+  {
+    title: "Influencers Rewired Japan's Urge to Spend",
+    date: "2026",
+    excerpt:
+      "Japan's appetite for spending is being driven less by ads or the economy and more by YouTubers. There used to be no medium that showed ordinary people how the very wealthy actually live; now anyone can watch it with enough realism to compare. Visibility creates comparison, and comparison creates appetite. I hold this one loosely — it needs data — but the mechanism feels right.",
+    tags: ["Media", "Consumption"],
   },
   {
     title: "Born 2000–2003: The Lucky Window",

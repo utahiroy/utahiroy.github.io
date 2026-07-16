@@ -75,7 +75,7 @@ export const hobbies: Hobby[] = [
   {
     title: "History & Street Walks",
     description:
-      "Old streets, shrines, castle grounds — I read them as systems: what was this place for, and what of it still shapes today's town?",
+      "Old streets, shrines, castle grounds — I read them as systems: what was this place for, and which parts of it still shape the town today?",
     details:
       "Dates and names interest me less than function — a castle matters as a seat of politics and administration, not as a big building. Finding the old structure inside the current city is the game.",
     image: {
@@ -86,7 +86,7 @@ export const hobbies: Hobby[] = [
   {
     title: "Cross-Cultural Exchange",
     description:
-      "Living in both Japan and the US taught me to read differences as differences — habits, education, relationships, work — not as rankings.",
+      "Living in both Japan and the US taught me to see differences as just that — habits, education, relationships, work — differences, not rankings.",
     details:
       "I enjoy explaining Japan to visitors. I once guided a tour group from abroad through a historic castle town: no jargon, one or two reasons why each spot matters, and time to just look. Explaining a place to someone with no shared context teaches you what actually matters about it.",
   },
