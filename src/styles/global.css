@@ -171,7 +171,6 @@ span.glass {
   transition:
     transform 0.4s cubic-bezier(0.34, 1.4, 0.4, 1),
     box-shadow 0.4s ease;
-  will-change: transform;
 }
 
 .glass-interactive:hover {
@@ -223,11 +222,40 @@ span.glass {
   }
 }
 
+/* Keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--color-sage-600);
+  outline-offset: 2px;
+}
+
+/* Mobile: lighter compositing load, plain-border nav (the edge ring
+   cannot track a horizontally scrolling element) */
+@media (max-width: 640px) {
+  .glass,
+  .glass-sage,
+  .glass-nav {
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    backdrop-filter: blur(14px) saturate(160%);
+  }
+  .glass-nav::after {
+    content: none;
+  }
+  .glass-nav {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .glass-interactive,
   .glass-nav,
   .drift {
     transition: none;
+    animation: none;
+  }
+  .animate-bounce {
     animation: none;
   }
   .reveal {

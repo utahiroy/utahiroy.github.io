@@ -31,7 +31,9 @@ const t = ja
       mvvLabel: workJa.mvv.label,
       mvvNote: workJa.mvv.note,
       mvvValues: workJa.mvv.valuesJa,
-      educationTitle: "Education",
+      mvvSource: "https://corp.asuene.com/company",
+      skillsTitle: workJa.skillsTitle,
+      educationTitle: workJa.education.title,
       education: workJa.education.items,
       areasTitle: workJa.areas.title,
       areas: workJa.areas.items,
@@ -49,6 +51,8 @@ const t = ja
       mvvLabel: asueneMvv.label,
       mvvNote: asueneMvv.note,
       mvvValues: asueneMvv.values,
+      mvvSource: asueneMvv.source,
+      skillsTitle: "Skills",
       educationTitle: "Education",
       education,
       areasTitle: "Areas of Work",
@@ -140,7 +144,7 @@ const t = ja
       <div class="mt-6 flex flex-wrap gap-2">
         {
           t.mvvValues.map((v) => (
-            <span class="glass rounded-full px-3.5 py-1.5 text-sm font-medium text-sage-700">
+            <span class="rounded-full border border-white/70 bg-white/70 px-3.5 py-1.5 text-sm font-medium text-sage-700">
               {v}
             </span>
           ))
@@ -150,7 +154,7 @@ const t = ja
         {t.mvvNote}
       </p>
       <a
-        href={asueneMvv.source}
+        href={t.mvvSource}
         target="_blank"
         rel="noopener noreferrer"
         class="mt-4 inline-flex items-center text-sm font-medium text-sage-600 transition-colors hover:text-sage-700"
@@ -208,7 +212,7 @@ const t = ja
   <!-- Skills & Certifications -->
   <Section>
     <div class="reveal">
-      <SectionLabel label="Skills" />
+      <SectionLabel label={t.skillsTitle} />
       <div class="flex flex-wrap gap-3">
         {
           skills.map((skill) => (

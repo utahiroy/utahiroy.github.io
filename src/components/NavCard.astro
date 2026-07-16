@@ -3,9 +3,10 @@ interface Props {
   title: string;
   description: string;
   href: string;
+  cta?: string;
 }
 
-const { title, description, href } = Astro.props;
+const { title, description, href, cta = "Explore" } = Astro.props;
 ---
 
 <a
@@ -21,8 +22,8 @@ const { title, description, href } = Astro.props;
     {description}
   </p>
   <span
-    class="mt-4 inline-flex items-center text-xs font-medium text-sage-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    class="mt-4 inline-flex items-center text-sm font-medium text-sage-600 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100"
   >
-    Explore &rarr;
+    {cta} &rarr;
   </span>
 </a>

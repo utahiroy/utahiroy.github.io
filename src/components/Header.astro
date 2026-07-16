@@ -25,11 +25,12 @@ const togglePath = ja
 <header class="fixed inset-x-0 top-3 z-50 flex justify-center px-3 sm:top-4 sm:px-4">
   <nav
     id="site-nav"
+    aria-label={ja ? "メインナビゲーション" : "Main navigation"}
     class="no-scrollbar glass-nav flex max-w-full items-center gap-1 overflow-x-auto rounded-full py-1.5 pr-1.5 pl-4 whitespace-nowrap sm:gap-5 sm:py-2 sm:pr-2 sm:pl-6"
   >
     <a
       href={homeHref}
-      class="hidden text-sm font-semibold tracking-wide text-neutral-900 transition-colors hover:text-sage-600 sm:block"
+      class="text-sm font-semibold tracking-wide text-neutral-900 transition-colors hover:text-sage-600"
     >
       utahiroy
     </a>
@@ -43,6 +44,7 @@ const togglePath = ja
             <li>
               <a
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 class:list={[
                   "block rounded-full px-2.5 py-2 text-sm tracking-wide transition-all sm:px-3",
                   active
