@@ -186,6 +186,15 @@ span.glass {
   transition-duration: 0.15s;
 }
 
+/* Hide scrollbars on horizontally scrollable pills (mobile nav) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Slow ambient drift for background blobs */
 @keyframes drift {
   0%,
