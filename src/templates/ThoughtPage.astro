@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import { thought, thoughts, thoughtFooter } from "../data/thought";
+import { thoughtJa } from "../data/ja";
+
+interface Props {
+  ja?: boolean;
+}
+const { ja = false } = Astro.props;
+
+const t = ja
+  ? {
+      title: "思想 — Utahiro Yoshimoto",
+      description:
+        "サステナビリティ、AI、生き方について、実際に持っている立場。",
+      headline: thoughtJa.headline,
+      summary: thoughtJa.summary,
+      entries: thoughtJa.entries,
+      footer: thoughtJa.footer,
+    }
+  : {
+      title: "Thought — Utahiro Yoshimoto",
+      description:
+        "Positions I actually hold — on sustainability, AI, and how to run a life.",
+      headline: thought.headline,
+      summary: thought.summary,
+      entries: thoughts,
+      footer: thoughtFooter,
+    };
+---
+
+<BaseLayout title={t.title} description={t.description} lang={ja ? "ja" : "en"}>
+  <Section>
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="Thought" />
+      <h1
+        class="text-5xl font-bold tracking-tight text-neutral-900 sm:text-6xl"
+      >
+        {t.headline}
+      </h1>
+      <p class="mt-8 text-xl leading-relaxed text-neutral-500">
+        {t.summary}
+      </p>
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal space-y-6">
+      {
+        t.entries.map((entry) => (
+          <article class="group glass rounded-2xl p-6 transition-all duration-300 hover:shadow-md hover:shadow-sage-100/30">
+            <div class="flex items-center gap-3">
+              <p class="text-sm font-medium text-neutral-400">{entry.date}</p>
+              {entry.tags && (
+                <div class="flex gap-2">
+                  {entry.tags.map((tag) => (
+                    <span class="rounded-full bg-neutral-100/80 px-2.5 py-0.5 text-xs font-medium text-neutral-400">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <h3 class="mt-3 text-lg font-semibold text-neutral-900 transition-colors group-hover:text-sage-700">
+              {entry.title}
+            </h3>
+            <p class="mt-3 text-base leading-relaxed text-neutral-500">
+              {entry.excerpt}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section narrow>
+    <div class="reveal text-center">
+      <p class="text-base text-neutral-400">
+        {t.footer}
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

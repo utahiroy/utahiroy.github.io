@@ -1,0 +1,253 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import {
+  work,
+  experience,
+  asueneMvv,
+  education,
+  areas,
+  skills,
+  certifications,
+  direction,
+} from "../data/work";
+import { workJa } from "../data/ja";
+
+interface Props {
+  ja?: boolean;
+}
+const { ja = false } = Astro.props;
+
+const t = ja
+  ? {
+      title: "仕事 — Utahiro Yoshimoto",
+      description:
+        "ESG コンサルティング、サステナビリティデータ、AI 自動化。経歴、スキル、方向性。",
+      headline: workJa.headline,
+      summary: workJa.summary,
+      experience: workJa.experience,
+      mvvTitle: workJa.mvv.title,
+      mvvLabel: workJa.mvv.label,
+      mvvNote: workJa.mvv.note,
+      mvvValues: workJa.mvv.valuesJa,
+      educationTitle: "Education",
+      education: workJa.education.items,
+      areasTitle: workJa.areas.title,
+      areas: workJa.areas.items,
+      certificationsTitle: workJa.certificationsTitle,
+      direction: workJa.direction,
+    }
+  : {
+      title: "Work — Utahiro Yoshimoto",
+      description:
+        "ESG consulting, sustainability data, and AI automation — experience, skills, and direction.",
+      headline: work.headline,
+      summary: work.summary,
+      experience,
+      mvvTitle: asueneMvv.title,
+      mvvLabel: asueneMvv.label,
+      mvvNote: asueneMvv.note,
+      mvvValues: asueneMvv.values,
+      educationTitle: "Education",
+      education,
+      areasTitle: "Areas of Work",
+      areas,
+      certificationsTitle: "Certifications",
+      direction,
+    };
+---
+
+<BaseLayout title={t.title} description={t.description} lang={ja ? "ja" : "en"}>
+  <!-- Header -->
+  <Section>
+    <div class="reveal max-w-2xl">
+      <SectionLabel label="Work" />
+      <h1
+        class="text-5xl font-bold tracking-tight text-neutral-900 sm:text-6xl"
+      >
+        {t.headline}
+      </h1>
+      <p class="mt-8 text-xl leading-relaxed text-neutral-500">
+        {t.summary}
+      </p>
+    </div>
+  </Section>
+
+  <!-- Experience -->
+  <Section>
+    <div class="reveal">
+      <SectionLabel label="Experience" />
+      <div class="space-y-6">
+        {
+          t.experience.map((job) => (
+            <div class="glass rounded-2xl p-6 md:p-8">
+              <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                <h3 class="text-lg font-semibold text-neutral-900">
+                  {job.role}
+                </h3>
+                <span class="text-sm font-medium text-neutral-400">
+                  {job.period}
+                </span>
+              </div>
+              <p class="mt-1 text-base font-medium text-sage-700">
+                {job.organization}
+              </p>
+              <p class="mt-4 text-base leading-relaxed text-neutral-600">
+                {job.description}
+              </p>
+              <ul class="mt-4 space-y-2">
+                {job.highlights.map((h) => (
+                  <li class="flex items-start gap-3 text-base text-neutral-500">
+                    <span class="mt-2 block h-1 w-1 flex-shrink-0 rounded-full bg-sage-400" />
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {job.tags.map((tag) => (
+                  <span class="rounded-full bg-sage-50/80 px-3 py-1 text-sm font-medium text-sage-700">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Section>
+
+  <!-- ASUENE MVV -->
+  <Section>
+    <div class="reveal glass-sage rounded-2xl p-8 md:p-10">
+      <SectionLabel label={t.mvvLabel} />
+      <h2 class="text-lg font-semibold text-neutral-900">
+        {t.mvvTitle}
+      </h2>
+      <p class="mt-6 text-3xl font-bold tracking-tight text-neutral-900">
+        {asueneMvv.mission.ja}
+      </p>
+      <p class="mt-2 text-sm text-neutral-500">
+        Mission — {asueneMvv.mission.en}
+      </p>
+      <p class="mt-5 text-xl font-semibold text-neutral-800">
+        {asueneMvv.vision.ja}
+      </p>
+      <p class="mt-1 text-sm text-neutral-500">
+        Vision — {asueneMvv.vision.en}
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {
+          t.mvvValues.map((v) => (
+            <span class="glass rounded-full px-3.5 py-1.5 text-sm font-medium text-sage-700">
+              {v}
+            </span>
+          ))
+        }
+      </div>
+      <p class="mt-7 text-base leading-relaxed text-neutral-600">
+        {t.mvvNote}
+      </p>
+      <a
+        href={asueneMvv.source}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 inline-flex items-center text-sm font-medium text-sage-600 transition-colors hover:text-sage-700"
+      >
+        corp.asuene.com &rarr;
+      </a>
+    </div>
+  </Section>
+
+  <!-- Education -->
+  <Section>
+    <div class="reveal">
+      <SectionLabel label={t.educationTitle} />
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          t.education.map((school) => (
+            <div class="glass rounded-2xl p-6">
+              <h3 class="text-base font-semibold text-neutral-900">
+                {school.school}
+              </h3>
+              <p class="mt-2 text-base leading-relaxed text-neutral-600">
+                {school.program}
+              </p>
+              {school.note && (
+                <p class="mt-1 text-sm text-neutral-400">{school.note}</p>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Section>
+
+  <!-- Areas of Work -->
+  <Section>
+    <div class="reveal">
+      <SectionLabel label={t.areasTitle} />
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          t.areas.map((area) => (
+            <div class="glass rounded-2xl p-6">
+              <h3 class="text-base font-semibold text-neutral-900">
+                {area.name}
+              </h3>
+              <p class="mt-2 text-base leading-relaxed text-neutral-500">
+                {area.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Section>
+
+  <!-- Skills & Certifications -->
+  <Section>
+    <div class="reveal">
+      <SectionLabel label="Skills" />
+      <div class="flex flex-wrap gap-3">
+        {
+          skills.map((skill) => (
+            <span class="glass rounded-full px-5 py-2.5 text-base text-neutral-600">
+              {skill}
+            </span>
+          ))
+        }
+      </div>
+      <div class="mt-10">
+        <h3 class="text-base font-semibold text-neutral-900">
+          {t.certificationsTitle}
+        </h3>
+        <ul class="mt-4 space-y-2">
+          {
+            certifications.map((cert) => (
+              <li class="flex items-start gap-3 text-base text-neutral-600">
+                <span class="mt-2 block h-1 w-1 flex-shrink-0 rounded-full bg-sage-400" />
+                <span>
+                  {cert.name}
+                  <span class="text-neutral-400"> — {cert.issuer}</span>
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Current Direction -->
+  <Section narrow>
+    <div class="reveal glass-sage rounded-2xl p-8">
+      <h2 class="text-lg font-semibold text-neutral-900">
+        {t.direction.title}
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-neutral-600">
+        {t.direction.description}
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

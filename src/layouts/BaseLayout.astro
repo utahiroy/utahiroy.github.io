@@ -6,16 +6,18 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  lang?: string;
 }
 
 const {
   title,
   description = "Personal portfolio of utahiroy — profile, work, hobbies, and thoughts.",
+  lang = "en",
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,7 +27,7 @@ const {
   </head>
   <body class="min-h-screen bg-neutral-50 text-neutral-900">
     <Header />
-    <main class="pt-16">
+    <main class="pt-24">
       <slot />
     </main>
     <Footer />

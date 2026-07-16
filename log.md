@@ -79,3 +79,11 @@
   - projects/portfolio-site/status.md
 - 何が分かったか: (要記入)
 - 次にやること: (要記入)
+
+## 2026-07-16 — auto-logged session
+- session: 2026-07-16T23:31:36 → 2026-07-16T23:35:16
+- touched (2):
+  - projects/portfolio-site/src/pages/index.astro
+  - projects/portfolio-site/src/pages/profile.astro
+- 何が分かったか: (要記入)
+- 次にやること: (要記入)
