@@ -52,11 +52,11 @@ const t = ja
         t.entries.map((entry) => (
           <article class="group glass rounded-3xl p-7 transition-all duration-300 hover:shadow-md hover:shadow-sage-100/30">
             <div class="flex items-center gap-3">
-              <p class="text-sm font-medium text-neutral-400">{entry.date}</p>
+              <p class="text-sm font-medium text-neutral-500">{entry.date}</p>
               {entry.tags && (
                 <div class="flex gap-2">
                   {entry.tags.map((tag) => (
-                    <span class="rounded-full bg-neutral-100/80 px-2.5 py-0.5 text-xs font-medium text-neutral-400">
+                    <span class="rounded-full bg-neutral-100/80 px-2.5 py-0.5 text-xs font-medium text-neutral-500">
                       {tag}
                     </span>
                   ))}
@@ -77,7 +77,7 @@ const t = ja
 
   <Section narrow>
     <div class="reveal text-center">
-      <p class="text-base text-neutral-400">
+      <p class="text-base text-neutral-500">
         {t.footer}
       </p>
     </div>

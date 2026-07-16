@@ -130,32 +130,48 @@ span.glass {
     box-shadow 0.45s ease;
 }
 
-/* Refractive edge highlight (gradient ring masked to a 1px border) */
-.glass::after,
-.glass-sage::after,
-.glass-nav::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.28) 28%,
-    rgba(255, 255, 255, 0.08) 55%,
-    rgba(255, 255, 255, 0.55) 100%
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  pointer-events: none;
+/* Plain 1px border as the baseline; browsers with mask compositing
+   swap it for the refractive gradient ring below */
+.glass,
+.glass-sage,
+.glass-nav {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+@supports ((-webkit-mask-composite: xor) or (mask-composite: exclude)) {
+  .glass,
+  .glass-sage,
+  .glass-nav {
+    border: none;
+  }
+
+  /* Refractive edge highlight (gradient ring masked to a 1px border) */
+  .glass::after,
+  .glass-sage::after,
+  .glass-nav::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.28) 28%,
+      rgba(255, 255, 255, 0.08) 55%,
+      rgba(255, 255, 255, 0.55) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
 }
 
 /* iOS-style compact state when scrolling down */
@@ -238,10 +254,10 @@ span.glass {
     backdrop-filter: blur(14px) saturate(160%);
   }
   .glass-nav::after {
-    content: none;
+    content: none !important;
   }
   .glass-nav {
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
   }
 }
 

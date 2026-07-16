@@ -26,8 +26,6 @@ export const navJa = [
 ];
 
 export const homeJa = {
-  aboutLead:
-    "ESG コンサルティングとデータと AI が交わる場所で働いています。専門家の手作業を言語化して構造化し、繰り返せる部分を AI に載せる仕事です。",
   aboutSub:
     "東京在住。日本の気候テック企業アスエネに所属しています。米国で環境科学を学び、サステナビリティ領域の forward deployed engineer を目指しています。",
   photoStrip: "写真: このサイトの写真はすべて 1 台の Sony α7 で撮っています →",
@@ -75,6 +73,7 @@ export const profileJa = {
   summary:
     "サステナビリティの業務を自動化する ESG コンサルタントです。軸は一つ、CO2 を早く、大きく削ること。これまでの選択はすべてこの目的につながっています。",
   portraitCaption: "東京・丸の内。LinkedIn と同じ 1 枚です。",
+  portraitAlt: "東京・丸の内に立つ吉本詩宏",
   background: {
     title: "背景",
     paragraphs: [
@@ -229,8 +228,6 @@ export const workJa = {
   mvv: {
     label: "アスエネ MVV",
     title: "このミッションのもとで働いています",
-    missionCaption: "Mission",
-    visionCaption: "Vision",
     note:
       "文化を我慢して入った会社ではなく、文化込みで好きで選んだ会社です。10 のバリューのうち特に自分を動かしているのは「“圧倒的”当事者意識」「即レス徹底 スピードが最大の武器」「AI に全振り」の 3 つで、もともと自分がそう働きたかった形そのものでした。そしてミッションは、自分の軸を会社の言葉にしたものだと思っています。",
     valuesJa: [
@@ -541,6 +538,51 @@ const sectionMetaJa: Record<string, { title: string; description: string }> = {
   },
 };
 
+const altJa: Record<string, string> = {
+  "/photos/japan-train.jpg": "森の小さな駅に停まるリゾート列車",
+  "/photos/temple-hall.jpg": "夏空の下、金色の鴟尾をいただく寺院の堂",
+  "/photos/kyushu-grassland.jpg": "夏の雲の下に広がる緑の草原の稜線",
+  "/photos/minatomirai-night.jpg": "夜の水面に映る観覧車とみなとみらいの街並み",
+  "/photos/fishing-line.jpg": "暗い水面の上で釣り糸を持つ手元",
+  "/photos/salt-flat-silhouette.jpg": "雲を映す鏡張りの塩湖に立つ人影",
+  "/photos/atacama-volcano-vista.jpg": "快晴の空の下、遠くの火山へ続く砂漠の稜線",
+  "/photos/mp-dawn.jpg": "朝一番の光に照らされるマチュピチュとワイナピチュ",
+  "/photos/sacred-valley.jpg": "アンデスの峰に囲まれた緑の谷底",
+  "/photos/machu-picchu.jpg": "緑の峰に囲まれ、上空から望むマチュピチュ",
+  "/photos/llamas-machu-picchu.jpg": "山並みを背にテラスで草を食むリャマ",
+  "/photos/andes-train.jpg": "アンデスの小さな駅で待つ列車",
+  "/photos/lake-titicaca-boats.jpg": "ウロス島に舫われた葦舟",
+  "/photos/valle-de-la-luna-dunes.jpg": "月面のような谷の砂丘を横切る足跡",
+  "/photos/desert-moonrise.jpg": "砂漠の稜線に昇る月と淡い色の空",
+  "/photos/shanghai-pudong.jpg": "川越しに望む東方明珠塔と陸家嘴の高層ビル群",
+  "/photos/hallstatt-lakefront.jpg": "冬の光の中、険しい山の麓に並ぶ湖畔の村",
+  "/photos/yu-garden-street.jpg": "豫園旧市街の反り屋根と賑わう路地",
+  "/photos/budapest-parliament.jpg": "夜に金色に輝くハンガリー国会議事堂",
+  "/photos/suzhou-lantern-alley.jpg": "夕方の賑わう路地に連なる赤提灯",
+  "/photos/stephansdom-nave.jpg": "蝋燭に照らされたシュテファン大聖堂のゴシックの身廊",
+  "/photos/arequipa-basilica-pigeons.jpg": "石造りの聖堂の階段に群れる鳩",
+  "/photos/gastown-rain.jpg": "雨に濡れたガスタウンのレンガ通りと街灯",
+  "/photos/budapest-matthias.jpg": "冬空にそびえるマーチャーシュ聖堂の尖塔",
+  "/photos/suzhou-garden.jpg": "柳と東屋の軒に縁どられた古典園林の池",
+  "/photos/budapest-raven.jpg": "ドナウ川と議事堂を背にしたワタリガラス像のシルエット",
+  "/photos/hallstatt-swan.jpg": "ハルシュタットの村を背に湖を滑る白鳥",
+  "/photos/hallstatt-overlook.jpg": "山の展望台から見下ろす湖と谷あいの町",
+  "/photos/aurora.jpg": "木立の上に広がる赤と緑のオーロラ",
+  "/photos/autumn-lake.jpg": "紅葉の森に囲まれた湖を見下ろす",
+  "/photos/split-rock-lighthouse.jpg": "秋のスペリオル湖の断崖に建つ灯台",
+  "/photos/bighorn-sheep.jpg": "雪の山道を下るビッグホーンの群れ",
+  "/photos/rockies-winter-road.jpg": "重い冬雲の下、雪に縁どられた山道",
+  "/photos/yellowstone-terrace.jpg": "雪の中で湯気を上げる石灰華のテラス",
+  "/photos/alpine-chapel.jpg": "深い青空の下、雪の山頂に建つ石の礼拝堂",
+  "/photos/desert-toast.jpg": "夕日の砂漠に掲げたスパークリングワインのグラス",
+  "/photos/shanghai-dumplings.jpg": "竹の蒸篭に入った小籠包",
+  "/photos/lotus-suzhou.jpg": "庭園に咲くピンクの蓮",
+  "/photos/fish-market.jpg": "市場の氷の上に並ぶ鮮魚",
+  "/photos/speed-sign-moon.jpg": "夕暮れの制限速度標識と並ぶ月",
+  "/photos/airplane-window.jpg": "夜明けの空港を望む機窓",
+  "/photos/latte-art.jpg": "木のテーブルに並ぶハート模様のラテ 2 杯",
+};
+
 const captionJa: Record<string, string> = {
   "/photos/japan-train.jpg": "森を抜けるローカル線",
   "/photos/temple-hall.jpg": "寺院の堂",
@@ -601,5 +643,6 @@ export const photoSectionsJa: PhotoSection[] = enSections.map((s) => ({
   photos: s.photos.map((p) => ({
     ...p,
     caption: captionJa[p.src] ?? p.caption,
+    alt: altJa[p.src] ?? p.alt,
   })),
 }));

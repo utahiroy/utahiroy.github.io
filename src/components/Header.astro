@@ -60,6 +60,7 @@ const togglePath = ja
       }
       <li>
         <a
+          id="lang-toggle"
           href={togglePath}
           class="block rounded-full border border-white/70 bg-white/40 px-2.5 py-2 text-xs font-medium tracking-wide text-neutral-500 transition-all hover:bg-white/70 hover:text-sage-700 sm:px-3"
         >
@@ -86,4 +87,17 @@ const togglePath = ja
     },
     { passive: true },
   );
+
+  // Keep the active item visible when the pill overflows (mobile)
+  const active = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    active.scrollIntoView({ inline: "center", block: "nearest" });
+  }
+
+  // Language toggle: carry the current query and anchor across languages
+  const toggle = document.getElementById("lang-toggle");
+  toggle?.addEventListener("click", () => {
+    const base = (toggle.getAttribute("href") ?? "/").split(/[?#]/)[0];
+    toggle.setAttribute("href", base + location.search + location.hash);
+  });
 </script>
