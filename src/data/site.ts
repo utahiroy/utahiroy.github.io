@@ -11,9 +11,9 @@ export const site = {
 
   /** Supporting sentence beneath the tagline. */
   intro:
-    "ESG consultant at ASUENE, automating the work behind sustainability. Off the clock: a Sony α7, lakes, music, and old streets.",
+    "Sustainability consultant at ASUENE. Off the clock: a Sony α7, lakes, music, and old streets.",
 
   /** Short site-wide description used in meta tags. */
   description:
-    "Utahiro Yoshimoto — ESG consultant automating sustainability work with AI, and a Sony α7 photographer. Tokyo.",
+    "Utahiro Yoshimoto. Sustainability consultant at ASUENE working on ESG ratings, ESG data, and AI. Sony α7 photographer in Tokyo.",
 };

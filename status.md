@@ -3,7 +3,7 @@
 > 1 行サマリ: `utahiroy.github.io` 個人ポートフォリオサイト。Astro + TS + Tailwind v4 + React + Framer Motion。GitHub Pages deploy。
 
 - **Phase**: active (content & polish)
-- **Last updated**: 2026-07-17
+- **Last updated**: 2026-10-22
 - **Owner**: CEO
 - **Live**: https://utahiroy.github.io
 - **External repo**: `https://github.com/utahiroy/utahiroy.github.io.git` (origin remote 接続済)
@@ -15,6 +15,7 @@
 - deploy: `main` push → GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`)
 
 ## 進捗 (直近)
+- 2026-10-22：LinkedInの全面改修（名刺どおりの兼務の形）に合わせ、トップ、プロフィール、仕事の3ページを英日で書き換えた。役職はSustainability ConsultantとBusiness Planning、経歴は5件（インターンを1件にまとめた）、格付け機関の名前は記載しない、移行金融は関心の程度、FDEの語はAIエージェントの語に替えた。価値観の「Create value, don't just move money」を削除した。思想のページは変えていない。作業は仕事用Macの秘書外のClaude Codeから行った。
 - 2026-07-16 (第 3 弾): ギャラリーを **4 カテゴリ × 計 53 枚** に再構成 (Japan 13 / Mountains & Wild Places 20 / Cities & Streets 14 / Details & Small Hours 6)。+12 枚追加 (桜、九州草原、Zion、Yosemite Valley、Bonneville、Vienna、Budapest×2、Singapore、KL、Boston、釣り糸)
 - 2026-07-16 (第 2 弾): REQUEST_3 反映 (Hobby 8 カード化 + Profile「Beyond Work」+ Thought 13 本、地名等は抽象化) + ギャラリー拡充 20→41 枚 (ライブラリ全体から。a7 以外の iPhone/Canon も) + 全掲載写真に統一現像 (露出/WB/トーン/彩度、EXIF 除去)。Hobby 6/8 カードに写真
 - 2026-07-16 (第 1 弾): コンテンツ全面更新 (ローカル commit 済、**push は CEO 確認待ち**)

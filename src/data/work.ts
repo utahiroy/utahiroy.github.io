@@ -1,6 +1,6 @@
 /**
  * Work page content.
- * Mirrors the LinkedIn profile (source of truth: linkedin-revamp draft, 2026-07).
+ * Mirrors the LinkedIn profile (2026-10-22 revamp).
  * Edit this file to update experience, education, skills, and direction.
  */
 
@@ -16,74 +16,61 @@ export interface Experience {
 export const work = {
   headline: "What I Work On",
   summary:
-    "ESG consulting, sustainability data, and AI automation — advising companies on supply-chain sustainability and decarbonization, and automating the expert work behind it.",
+    "Sustainability consulting, ESG data, supply-chain security, and AI at ASUENE.",
 };
 
 export const experience: Experience[] = [
   {
-    role: "ESG Consultant (Internship)",
+    role: "Sustainability Consultant",
     organization: "ASUENE Inc.",
-    period: "Nov 2025 – Present",
-    description:
-      "ESG and sustainability consulting in the Supply Chain business unit of ASUENE, a leading Japanese climate-tech company.",
+    period: "Oct 2026 – Present",
+    description: "Sustainability Consulting Division, Strategy Group.",
     highlights: [
-      "Advise companies on ESG and sustainability strategy, supply-chain decarbonization, ratings, and disclosure",
-      "Translate frameworks and ratings into concrete actions clients can take",
-      "Work directly with clients, from their problem to a workable plan",
+      "Support companies on ESG ratings, from gap analysis to improvement plans",
+      "Build tools for repeatable rating work, with scoring kept in code",
     ],
-    tags: ["ESG Consulting", "Supply Chain", "Decarbonization", "Disclosure"],
+    tags: ["ESG Ratings", "Sustainability Consulting"],
   },
   {
-    role: "AI Automation Lead (Internship)",
+    role: "Business Planning",
     organization: "ASUENE Inc.",
-    period: "Nov 2025 – Present",
-    description:
-      "AI automation of ESG and sustainability work across the Supply Chain business unit.",
+    period: "Oct 2026 – Present",
+    description: "Supply Chain business unit.",
     highlights: [
-      "Lead how ESG and sustainability workflows get automated across the business unit",
-      "Articulate expert, manual processes, structure them, and put the repeatable parts onto AI (LLM and agent workflows)",
-      "Build reusable, comparable models so the automation scales beyond a single case",
+      "ESG data: deliver ESG and emissions data collected from public disclosures",
+      "Supply-chain security: support companies on supply-chain cybersecurity assessments",
+      "AI: choose which workflows to automate and take them to production with engineering",
     ],
-    tags: ["AI Automation", "LLM & Agents", "Ontology", "Workflow Design"],
+    tags: ["ESG Data", "Supply-Chain Security", "AI"],
   },
   {
-    role: "ESG Data Analyst (Internship)",
+    role: "Sustainability & AI Automation (Internship)",
     organization: "ASUENE Inc.",
-    period: "Nov 2024 – Nov 2025",
-    description:
-      "ESG and sustainability data analysis in the Supply Chain business unit.",
+    period: "Nov 2024 – Sep 2026",
+    description: "Supply Chain business unit.",
     highlights: [
-      "Analyzed corporate ESG and sustainability data across supply chains, mapping companies to disclosure and rating frameworks (SSBJ, ISSB, TCFD, and others)",
-      "Built the data and calculations behind supply-chain decarbonization assessments",
-      "Turned raw ESG and emissions data into decision-ready inputs for clients and internal teams",
+      "Analyzed corporate ESG and emissions data and mapped it to disclosure and rating frameworks",
+      "Supported companies on ESG ratings and disclosure, from gap analysis to improvement plans",
+      "Automated consulting workflows with LLMs and AI agents, from prototype to production",
     ],
-    tags: ["ESG Data", "SSBJ / ISSB / TCFD", "Supply Chain", "Analysis"],
+    tags: ["ESG Data", "ESG Ratings", "LLM & Agents"],
   },
   {
     role: "Researcher (Internship)",
     organization: "Institute for Sustainable Energy Policies (ISEP)",
     period: "May 2024 – Apr 2025",
-    description:
-      "ISEP is an independent Japanese think tank focused on renewable energy policy — separate from government and industry, advising national and local governments and linking Japan with energy-policy networks abroad.",
-    highlights: [
-      "Researched renewable energy policy in Japan and internationally",
-      "Analyzed policy and energy-market trends to support the institute's research",
-    ],
-    tags: ["Renewable Energy", "Energy Policy", "Research"],
+    description: "Renewable energy policy research.",
+    highlights: [],
+    tags: ["Renewable Energy", "Energy Policy"],
   },
   {
-    role: "Business Researcher (Internship)",
+    role: "Researcher (Internship)",
     organization: "E4G",
     period: "Apr 2024 – Nov 2024",
     description:
-      "E4G was a University of Tokyo spinout that built AI software to gather and analyze corporate ESG data from public sources, supporting decarbonization roadmaps from CO2 visualization through reduction planning. ASUENE fully acquired E4G in October 2024.",
-    highlights: [
-      "Worked mainly as a business researcher, producing the market, competitor, and ESG analysis behind product direction and client work",
-      "Researched ESG risk-mitigation strategies for listed companies pursuing RE100",
-      "Conducted environmental impact assessments and integrated data analytics into ESG reporting",
-      "Translated research findings into decision-ready inputs for corporate energy-transition planning",
-    ],
-    tags: ["ESG & Energy Transition", "RE100", "Business Research"],
+      "ESG and market research at a University of Tokyo spinout, acquired by ASUENE in 2024.",
+    highlights: [],
+    tags: ["ESG", "Market Research"],
   },
 ];
 
@@ -141,19 +128,23 @@ export interface WorkArea {
 
 export const areas: WorkArea[] = [
   {
-    name: "Supply-Chain Sustainability & Decarbonization",
-    description:
-      "Advising companies on emissions, ratings, and reduction plans across their supply chains — from assessment to actions they can actually take.",
+    name: "ESG Ratings",
+    description: "From gap analysis and evidence review to improvement plans.",
   },
   {
-    name: "ESG Ratings & Disclosure",
+    name: "ESG Data & Disclosure",
     description:
-      "GHG accounting and disclosure work across SSBJ, ISSB, TCFD, GRI, and SASB — making reporting decision-useful, not just compliant.",
+      "Corporate ESG and emissions data from public disclosures, mapped to disclosure frameworks.",
   },
   {
-    name: "AI Automation of ESG Work",
+    name: "Supply-Chain Security",
     description:
-      "Articulating expert, manual ESG processes, structuring them into ontologies, and handing the repeatable parts to LLM and agent workflows.",
+      "Supporting companies on the cybersecurity assessments their customers ask for.",
+  },
+  {
+    name: "AI for Sustainability Work",
+    description:
+      "Write down how experts judge, hand repeatable work to AI agents, and keep final judgments in code.",
   },
   {
     name: "Environmental Data & GIS",
@@ -162,17 +153,20 @@ export const areas: WorkArea[] = [
   },
 ];
 
-/** Mirrors the LinkedIn skills list (11 items, all evidence-backed). */
+/** Mirrors the LinkedIn skills list (14 items, 2026-10-22). */
 export const skills: string[] = [
   "ESG",
   "Sustainability Consulting",
+  "ESG Ratings",
+  "Artificial Intelligence (AI)",
+  "AI Agents",
+  "Supply Chain Security",
   "Sustainability Reporting",
   "ESG Disclosure & Compliance (SSBJ, ISSB, TCFD, GRI, SASB)",
-  "Artificial Intelligence (AI)",
-  "Anthropic Claude",
   "Sustainability Disclosure (IFRS)",
-  "Corporate Decarbonization Strategy & Renewable Energy Policy",
+  "Anthropic Claude",
   "Environmental Data Analytics & Geospatial Intelligence (GIS)",
+  "Corporate Decarbonization Strategy & Renewable Energy Policy",
   "Environmental Policy",
   "Data Analysis",
 ];
@@ -196,5 +190,5 @@ export const certifications: Certification[] = [
 export const direction = {
   title: "Current Direction",
   description:
-    "Where I'm headed is the forward deployed engineer's seat for sustainability: sitting with a customer, understanding their ESG problem in their own language, and building the system that solves it end to end. The method is to give sustainability data a structure — an ontology that links companies, emissions, disclosures, and supply-chain signals — then let LLMs turn unstructured reports into data and hand the repeatable analysis to AI agents. Decisions should run on a live, connected model of ESG reality instead of static, once-a-year spreadsheets.",
+    "Sustainability work where experts' judgment is written down, AI agents run the repeatable steps, and final calls stay in code. Lately I have also been interested in transition finance.",
 };

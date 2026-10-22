@@ -1,13 +1,13 @@
 /**
  * Profile page content.
- * Aligned with the LinkedIn About section (2026-07 revamp).
+ * Aligned with the LinkedIn profile (2026-10-22 revamp).
  * Edit this file to update your personal information.
  */
 
 export const profile = {
   headline: "Who I Am",
   summary:
-    "An ESG consultant who automates the work behind sustainability. My axis is simple: cut CO2, early and at scale. Everything I have chosen points at that one goal.",
+    "Sustainability consultant at ASUENE. My axis is simple: cut CO2, early and at scale.",
   /** Portrait shown on the profile page (lives in /public/photos/). */
   portrait: {
     src: "/photos/portrait.jpg",
@@ -20,9 +20,8 @@ export const profile = {
 export const background = {
   title: "Background",
   paragraphs: [
-    "I grew up in Japan, studied environmental science in the United States with a minor in GIS, and moved back to Tokyo in 2026. A degree in environmental science, two years in climate-tech, and now building AI into that work — each step points at the same goal.",
-    "I read climate from both sides. My work has always put natural systems and human systems into the same model: emissions and energy alongside economics, policy, and behavior. Sustainability matters because those are one system, not two. You cannot fix the physical without changing the institutional.",
-    "At ASUENE, a leading Japanese climate-tech company, and earlier at E4G, I advise companies across ESG and sustainability — from supply-chain decarbonization to ratings and disclosure. Increasingly, I lead how that work gets automated: taking the expert, manual parts of ESG, structuring them, and putting the repeatable pieces onto AI.",
+    "I grew up in Japan, studied environmental science with a GIS minor in the United States, and moved back to Tokyo in 2026.",
+    "Since 2024, at E4G and then ASUENE, I have worked on ESG research, data, ratings, and the AI automation behind them.",
   ],
 };
 
@@ -33,11 +32,6 @@ export const values = {
       name: "Purpose over pay",
       description:
         "I have turned down passive roles to stay on the problems I chose. The goal — cutting CO2 — decides what I work on, not the other way around.",
-    },
-    {
-      name: "Create value, don't just move money",
-      description:
-        "I want to stand on the side of the economy that creates new value. The same applies to AI: it can help or harm depending on who owns and governs it, so I point it at emissions and climate policy.",
     },
     {
       name: "Not No.1, but Only 1",
@@ -85,7 +79,7 @@ export const life = {
 export const outlook = {
   title: "Where I'm Headed",
   description:
-    "The forward deployed engineer's seat for sustainability: sitting with a customer, understanding their ESG problem in their own language, and building the system that solves it end to end. Ontologies give sustainability data a structure, LLMs turn unstructured reports into data, and AI agents take the repeatable analysis — so decisions run on a live, connected model of ESG reality instead of static, once-a-year spreadsheets.",
+    "Sustainability work where experts' judgment is written down, AI agents run the repeatable steps, and final calls stay in code. Lately I have also been interested in transition finance.",
 };
 
 export interface GlanceItem {
@@ -95,8 +89,8 @@ export interface GlanceItem {
 
 export const glance: GlanceItem[] = [
   { label: "Based in", value: "Tokyo, Japan" },
-  { label: "Role", value: "ESG Consultant · AI Automation @ ASUENE" },
+  { label: "Role", value: "Sustainability Consultant, Business Planning @ ASUENE" },
   { label: "Education", value: "B.S. Environmental Science, GIS minor" },
   { label: "Languages", value: "Japanese (native), English" },
-  { label: "Direction", value: "Forward Deployed Engineer for sustainability" },
+  { label: "Direction", value: "AI agents for sustainability work" },
 ];
