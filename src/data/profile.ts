@@ -55,9 +55,9 @@ export const approach = {
         "Today is the youngest I will ever be. I prefer touched-and-experienced over saw-and-heard, and I treat a high experiment count as a feature, not recklessness.",
     },
     {
-      name: "Structure before scale",
+      name: "Write down the steps before automating",
       description:
-        "Before automating anything, I articulate the expert's manual process and give it structure. Clean foundations are what let AI take over the repeatable parts.",
+        "Before automating anything, I write down the steps and rules people follow by hand. Once the steps are fixed, AI can take over the repetitive parts.",
     },
     {
       name: "Sit with the customer",
@@ -79,7 +79,7 @@ export const life = {
 export const outlook = {
   title: "Where I'm Headed",
   description:
-    "Sustainability work where experts' judgment is written down, AI agents run the repeatable steps, and final calls stay in code. Lately I have also been interested in transition finance.",
+    "Connect companies, emissions, disclosures, and suppliers in one model (an ontology), turn the rules experienced people work by into code, and let AI do only the tasks we have defined. That is how I want sustainability work to run. I am also interested in sustainable finance (including transition finance), sustainability disclosure, and climate and geospatial data.",
 };
 
 export interface GlanceItem {

@@ -144,12 +144,12 @@ export const areas: WorkArea[] = [
   {
     name: "AI for Sustainability Work",
     description:
-      "Write down how experts judge, hand repeatable work to AI agents, and keep final judgments in code.",
+      "Turn the rules experienced people work by into code, and let AI agents do only the tasks we have defined.",
   },
   {
     name: "Environmental Data & GIS",
     description:
-      "Environmental data analysis and geospatial intelligence — putting natural systems and human systems into the same model.",
+      "Layering environmental data and data on how people live on the same map (GIS) to analyze them together.",
   },
 ];
 
@@ -190,5 +190,5 @@ export const certifications: Certification[] = [
 export const direction = {
   title: "Current Direction",
   description:
-    "Sustainability work where experts' judgment is written down, AI agents run the repeatable steps, and final calls stay in code. Lately I have also been interested in transition finance.",
+    "Connect companies, emissions, disclosures, and suppliers in one model (an ontology), turn the rules experienced people work by into code, and let AI do only the tasks we have defined. That is how I want sustainability work to run. I am also interested in sustainable finance (including transition finance), sustainability disclosure, and climate and geospatial data.",
 };
